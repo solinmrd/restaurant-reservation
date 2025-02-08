@@ -365,3 +365,102 @@ nav {
   font-size: 0.7rem;
   text-transform: capitalize;
 }
+
+/* --------------------------------------------------ABOUT STYLE START HERE*/
+.about-photo .col-6 {
+  float: left;
+  padding: 1%;
+}
+.about-photo .col-6 img {
+  width: 100%;
+  height: auto;
+  box-shadow: 5px 2px 5px 2px rgba(0, 0, 0, 0.1);
+  animation: about-anim linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 25%;
+  animation-duration: 5s;
+}
+.about-photo .col-6 .about-photo-80 {
+  width: 80%;
+}
+@keyframes about-anim {
+  0% {
+    width: 20%;
+    opacity: 0;
+    transform: translateY(50%);
+  }
+
+  100% {
+    width: 100%;
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+.about-photo .col-6 .about-photo-80.first img {
+  margin-top: 25%;
+}
+.about-photo .col-6 .about-photo-80.second img {
+  margin-left: 25%;
+}
+.about-paragraph{
+  padding: 2rem;
+}
+
+.about-paragraph h4 {
+  color: #ffcd39;
+}
+.about-paragraph h4 span {
+  display: inline-block;
+  content: "";
+  width: 10%;
+  height: 0.5rem;
+  border-top: 2px solid #ffcd39;
+  transform: rotate(360deg);
+}
+.about-paragraph h2 {
+  color: #000;
+  font-weight: 600;
+}
+.about-paragraph h2 span {
+  color: #e8b10e;
+}
+.about-paragraph p {
+  font-size: 16px;
+  color: #000;
+  opacity: 0.9;
+  text-align: justify;
+}
+
+.counters .counter-card {
+  display: flex;
+  border-left: 3px solid #e8b10e; 
+  height: 4rem;
+  line-height: 4rem;
+}
+
+.counters .counter-num span{
+margin-right: .5rem;
+}
+.counters .counter-num p{
+  font-size: 2rem;
+  font-weight: 600;
+  color: #e8b10e;
+  margin: 0;
+}
+.counters .counter-text{
+  display: block;
+  text-transform: capitalize;
+  align-items: center;
+  padding-top: .8rem;
+}
+.counters .counter-text h6{
+  color: #676565;
+  font-weight: 500;
+  font-size: .8rem;
+  margin: 0;
+}
+.counters .counter-text h4 {
+  color: #e8b10e;
+  font-size: 1.2rem;
+  font-weight: 600;
+}

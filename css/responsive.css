@@ -13,6 +13,33 @@
     font-size: 1.6rem;
     padding-left: 0;
   }
+  .about-paragraph {
+    padding: 1rem;
+  }
+  .about-paragraph h4{
+    font-size: 1rem;
+  }
+  .about-paragraph h2{
+    font-size: 1.5rem;
+  }
+  .about-paragraph p {
+    font-size: 14px;
+  }
+  .counters .counter-card {
+    height: 3rem;
+    line-height: 3rem;
+    margin-top: 1rem;
+  }
+  .counters .counter-card:nth-child(1) {
+    margin-top: 0rem;
+  }
+  .counters .counter-text h4 {
+    font-size: 1.1rem;
+  }
+  .counters .counter-num span{
+    margin-right: 1rem;
+    }
+   
 }
 @media screen and (min-width: 769px) and (max-width: 1185px) {
   .menu-logo {
@@ -41,9 +68,6 @@
     font-weight: 400;
     font-size: 15px;
   }
-
-
-
 }
 @media screen and (min-width: 769px) and (max-width: 830px) {
   .menu-logo {
@@ -219,7 +243,6 @@
   }
 }
 
-
 /* SERVICES MEDIA RESPONSIVE */
 @media screen and (min-width: 350px) and (max-width: 600px) {
   .services-card {
@@ -230,16 +253,15 @@
     width: 82% !important;
   }
 }
-@media screen and (min-width: 600px) and (max-width: 1024px){
+@media screen and (min-width: 600px) and (max-width: 1024px) {
   .services-card {
     width: 100%;
-    display: grid; 
+    display: grid;
     grid-template-columns: auto auto;
     float: left;
   }
   .services-card .card {
     width: 100% !important;
-
   }
 }
 @media screen and (min-width: 600px) and (max-width: 768px) {
@@ -267,8 +289,5 @@
   }
   .services-card .card {
     width: 100% !important;
-
   }
 }
-
-
