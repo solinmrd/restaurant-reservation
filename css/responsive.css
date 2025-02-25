@@ -295,7 +295,7 @@
 /* DEFAULR SIZES RESPONSIVE */
 
 /* small mobile */
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .team-section {
     display: block;
     padding: 0;
