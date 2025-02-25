@@ -16,10 +16,10 @@
   .about-paragraph {
     padding: 1rem;
   }
-  .about-paragraph h4{
+  .about-paragraph h4 {
     font-size: 1rem;
   }
-  .about-paragraph h2{
+  .about-paragraph h2 {
     font-size: 1.5rem;
   }
   .about-paragraph p {
@@ -36,10 +36,9 @@
   .counters .counter-text h4 {
     font-size: 1.1rem;
   }
-  .counters .counter-num span{
+  .counters .counter-num span {
     margin-right: 1rem;
-    }
-   
+  }
 }
 @media screen and (min-width: 769px) and (max-width: 1185px) {
   .menu-logo {
@@ -289,5 +288,19 @@
   }
   .services-card .card {
     width: 100% !important;
+  }
+}
+
+/* ----------------------------------------------------- */
+/* DEFAULR SIZES RESPONSIVE */
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .team-section {
+    display: block;
+    padding: 0;
+    justify-items: center;
+  }
+  .team-section .card {
+    margin-bottom: 1.5rem;
   }
 }

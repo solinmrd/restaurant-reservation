@@ -402,7 +402,7 @@ nav {
 .about-photo .col-6 .about-photo-80.second img {
   margin-left: 25%;
 }
-.about-paragraph{
+.about-paragraph {
   padding: 2rem;
 }
 
@@ -433,34 +433,126 @@ nav {
 
 .counters .counter-card {
   display: flex;
-  border-left: 3px solid #e8b10e; 
+  border-left: 3px solid #e8b10e;
   height: 4rem;
   line-height: 4rem;
 }
 
-.counters .counter-num span{
-margin-right: .5rem;
+.counters .counter-num span {
+  margin-right: 0.5rem;
 }
-.counters .counter-num p{
+.counters .counter-num p {
   font-size: 2rem;
   font-weight: 600;
   color: #e8b10e;
   margin: 0;
 }
-.counters .counter-text{
+.counters .counter-text {
   display: block;
   text-transform: capitalize;
   align-items: center;
-  padding-top: .8rem;
+  padding-top: 0.8rem;
 }
-.counters .counter-text h6{
+.counters .counter-text h6 {
   color: #676565;
   font-weight: 500;
-  font-size: .8rem;
+  font-size: 0.8rem;
   margin: 0;
 }
 .counters .counter-text h4 {
   color: #e8b10e;
   font-size: 1.2rem;
   font-weight: 600;
+}
+
+/* --------------------------------------------------TEAM STYLE START HERE*/
+.section-title {
+  text-align: center;
+}
+.section-title h2 {
+  font-weight: 600;
+  color: #e8b10e;
+  text-transform: capitalize;
+}
+.section-title h5 {
+  padding-top: 1rem;
+  color: #000000bb;
+  font-weight: 300;
+  font-size: 1rem;
+}
+.team-section {
+  display: flex;
+  justify-content: space-between;
+}
+.team-section .card {
+  width: 18rem;
+  background-color: rgba(245, 245, 245, 0.223);
+  height: 22rem;
+  border-radius: 0;
+  border: 1px solid #67656538;
+  /* box-shadow: 2px 2px 8px #6765656a; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  transition: all 0.5s ease-in;
+  
+}
+.team-section .card:hover {
+  height: 26rem;
+}
+.team-section .card img {
+  border-radius: 50%;
+  width: 70%;
+  margin: 1.5rem auto;
+}
+.team-section .card .card-body {
+  padding: 0.5rem;
+}
+.team-section .card .card-body {
+  text-align: center;
+}
+
+.team-section .card .card-body h3 {
+  font-size: 1.4rem;
+  color: #e8b10e;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+}
+.team-section .card .card-body h4 {
+  font-size: 1rem;
+  color: #000;
+  text-transform: capitalize;
+}
+.team-section .card .social-media {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.team-section .card .social-media .social-media-item {
+  width: 2rem;
+  height: 2rem;
+  font-size: 1rem;
+  align-items: center;
+  text-align: center;
+  background-color: #e8b10e;
+  border-radius: 50%;
+  padding: 0.2rem;
+  color: #fff;
+  margin: 0 3%;
+  /* display: none; */
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  /* transition-delay: 10s; */
+
+}
+.team-section .card:hover .social-media .social-media-item {
+  /* display: block; */
+  opacity: 1;
+  transition-delay: .5s;
+  
+}
+.team-section .card .social-media .social-media-item:hover {
+  background-color: #000;
+  color: #fff;
+
 }
