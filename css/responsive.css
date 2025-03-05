@@ -20,7 +20,7 @@
     font-size: 1rem;
   }
   .about-paragraph h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   .about-paragraph p {
     font-size: 14px;
@@ -304,6 +304,57 @@
   .team-section .card {
     margin-bottom: 1.5rem;
   }
+  .food-section {
+    width: 90%;
+    display: block;
+  }
+
+  .section-title h2 {
+    font-size: 1.2rem;
+  }
+  .section-title h5 {
+    font-size: 0.8rem;
+  }
+
+  .food-menu {
+    width: 100%;
+  }
+  .food-menu .tabs-box {
+    display: none;
+  }
+
+  .food-menu .content-box .content h2 {
+    display: block;
+  }
+  .food-menu .content-box {
+    padding: 0.5rem;
+  }
+
+  .food-menu .content-box .content {
+    display: block;
+    padding-top: 0.5rem;
+  }
+  .food-menu .content-box .content.active {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
+  .food-item {
+    border-bottom: none;
+  }
+  .food-item img {
+    width: 60px;
+    height: 60px;
+  }
+  .food-details h1 {
+    font-size: 0.9rem;
+  }
+  .food-details p {
+    font-size: 0.7rem;
+  }
+  .food-price {
+    font-size: 0.9rem;
+  }
 }
 
 /* mobile */
@@ -334,6 +385,35 @@
   .team-section .card .social-media {
     margin: 0rem 0rem 2rem;
   }
+
+  .food-menu {
+    width: 90%;
+  }
+
+  .food-menu .tabs-box .tab-btn {
+    font-size: 0.8rem;
+  }
+  .food-menu .line {
+    top: 3.5rem;
+    left: 1.5rem;
+    width: 5.5rem;
+  }
+  .food-menu .content-box {
+    padding: 0.8rem;
+  }
+  .food-item img {
+    width: 70px;
+    height: 70px;
+  }
+  .food-details h1 {
+    font-size: 0.9rem;
+  }
+  .food-details p {
+    font-size: 0.6rem;
+  }
+  .food-price {
+    font-size: 0.9rem;
+  }
 }
 
 /* laptop */
@@ -348,7 +428,32 @@
     height: 19rem;
   }
   .team-section .card:hover {
-    height: 21rem;
+    height: 22rem;
+  }
+
+  .food-menu {
+    width: 90%;
+  }
+
+  .food-menu .tabs-box .tab-btn {
+    font-size: 1rem;
+  }
+  .food-menu .line {
+    left: 1.8rem;
+  }
+
+  .food-item img {
+    width: 75px;
+    height: 75px;
+  }
+  .food-details h1 {
+    font-size: 1rem;
+  }
+  .food-details p {
+    font-size: 0.8rem;
+  }
+  .food-price {
+    font-size: 1rem;
   }
 }
 /* other screen */
@@ -365,5 +470,4 @@
   .team-section .card:hover {
     height: 25rem;
   }
-
 }
