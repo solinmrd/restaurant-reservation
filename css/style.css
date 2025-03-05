@@ -475,7 +475,7 @@ nav {
   text-transform: capitalize;
 }
 .section-title h5 {
-  padding-top: 1rem;
+  padding-top: 0.2rem;
   color: #000000bb;
   font-weight: 300;
   font-size: 1rem;
@@ -493,7 +493,6 @@ nav {
   /* box-shadow: 2px 2px 8px #6765656a; */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
   transition: all 0.5s ease-in;
-  
 }
 .team-section .card:hover {
   height: 26rem;
@@ -543,16 +542,125 @@ nav {
   transition: all 0.2s ease-in-out;
   opacity: 0;
   /* transition-delay: 10s; */
-
 }
 .team-section .card:hover .social-media .social-media-item {
   /* display: block; */
   opacity: 1;
-  transition-delay: .5s;
-  
+  transition-delay: 0.5s;
 }
 .team-section .card .social-media .social-media-item:hover {
   background-color: #000;
   color: #fff;
+}
 
+/* --------------------------------------------------FOOD MENU STYLE START HERE*/
+
+.food-menu {
+  width: 80%;
+  margin: auto;
+  /* color: #fff; */
+}
+
+.food-menu .tabs-box {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  justify-items: center;
+  margin-top: 3rem;
+  border-bottom: 2px solid rgba(229, 229, 229);
+}
+.food-menu .tabs-box .tab-btn {
+  border: 0;
+  background-color: #fff;
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #666;
+  padding: 1.2rem 0;
+  cursor: pointer;
+}
+.food-menu .tabs-box .tab-btn.active {
+  color: #e8b10e;
+}
+.food-menu .line {
+  position: absolute;
+  top: 3.8rem;
+  left: 3.2rem;
+  width: 7.8rem;
+  height: 0.4rem;
+  background-color: #e8b10e;
+  z-index: 22000;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.food-menu .content-box {
+  padding: 1rem;
+}
+.food-menu .content-box .content {
+  width: 100%;
+  display: none;
+  animation: moving 0.5s ease;
+}
+
+@keyframes moving {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+.food-menu .content-box .content.active {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 1rem;
+}
+.food-menu .content-box .content h2 {
+  display: none;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  width: 100%;
+  font-weight: 600;
+  color: #e8b10e;
+}
+.food-menu .content-box .content h2 > hr {
+  color: #666;
+}
+
+.food-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.food-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.food-details {
+  flex: 8;
+  padding: 0 15px;
+}
+.food-details h1 {
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+  text-transform: capitalize;
+}
+.food-details p {
+  font-size: 0.8rem;
+  color: #666;
+  text-transform: capitalize;
+}
+.food-price {
+  flex: 2;
+  text-align: right;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #e8b10e;
 }
