@@ -664,3 +664,258 @@ nav {
   font-weight: bold;
   color: #e8b10e;
 }
+/* --------------------------------------------------RESERVATION STYLE START HERE*/
+::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+dialog {
+  position: fixed;
+  display: grid;
+  grid-template-rows: auto auto;
+  box-sizing: border-box;
+  width: calc(100% - 5em);
+  max-width: 40rem;
+  padding: 0.8em 1.5em 1em;
+  margin: auto;
+  border: 1px solid transparent;
+  border-radius: 0.5em;
+  scrollbar-width: none;
+  box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.2);
+
+}
+
+dialog .close-btn {
+  height: inherit;
+  text-align: right;
+  font-size: 1.5rem;
+  color: #666;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+/* form style */
+dialog .form {
+  width: 80%;
+  max-width: 25rem;
+  margin: auto;
+}
+.form .form-header {
+  text-align: center;
+  padding: 1.2rem;
+  display: grid;
+  gap: 5px;
+}
+.form .form-header h2 {
+  font-size: 1.5rem;
+}
+.form .form-header p {
+  color: #555;
+  font-size: 0.9rem;
+}
+.form .form-body {
+  border-radius: 20px;
+  height: 30rem;
+  overflow: hidden;
+  background-color: transparent;
+}
+.form .form-body .pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 0.9rem 1.2rem;
+}
+.form .form-body .pagination .number {
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  border-radius: 50%;
+  background-color: #e8b10e;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.form .form-body .pagination .bar {
+  width: 50px;
+  height: 3px;
+  background-color: #e8b10e;
+  border-radius: 5px;
+}
+.form .form-body .pagination .active ~ div {
+  background-color: #ddd;
+  color: #111;
+}
+.form .steps {
+  width: 400%;
+  display: flex;
+  transition: all 300ms ease-in-out;
+}
+.form .steps .step {
+  width: 98vw;
+  max-width: 25rem;
+  padding: 5px 15px 15px;
+  overflow: hidden;
+}
+.form .steps .step h4 {
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+}
+.form .steps .step p {
+  color: #555;
+  max-width: 90%;
+  font-size: 0.9rem;
+}
+.form .steps .step .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+.form .steps .step .grid .col label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+.form .steps .step .grid .col input {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #bbb;
+  font-family: 0.9rem;
+  border-radius: 8px;
+}
+.form .form-footer {
+  padding: 15px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.form .form-footer button {
+  width: 7rem;
+  align-items: center;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 1px solid #bbb;
+  background-color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+.form .form-footer button:hover {
+  background-color: #000;
+  color: #fff;
+  border: none;
+}
+/* No Of Person Style */
+.reserv-card {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  gap: 0.5rem;
+  /* width: 30rem; */
+  /* padding: 2rem; */
+  background-color: #fff;
+}
+
+.reserv-card .selection-item {
+  display: flex;
+  border: 2px solid #ddd;
+  justify-content: center;
+  padding: 0.5rem;
+  height: 3.5rem;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all.3s ease-in;
+}
+.reserv-card .selection-item:hover {
+  border: 2px solid transparent;
+  background-color: #e8b10e;
+  color: #fff;
+  font-weight: 900;
+}
+.reserv-card .selection-item.selected {
+  background-color: #e8b10e;
+  border: 2px solid transparent;
+}
+
+.reserv-card .selection-item .selection-item-label {
+  color: #000;
+  font-size: 1rem;
+  margin: 0;
+}
+.reserv-card .selection-item:hover .selection-item-label {
+  color: #fff;
+  font-weight: bold;
+}
+
+.reserv-card .selection-item.selected .selection-item-label {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Calendar Style */
+.form > .form-body > .steps > .step > .calendar {
+  background-color: #fff;
+  height: 23rem;
+
+  overflow: hidden;
+  /* width: 30rem; */
+  color: #000;
+  /* padding: 20px; */
+}
+.form > .form-body > .steps > .step > .calendar .calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 10px; */
+}
+.form .calendar .calendar-header .btn {
+  color: #000;
+  cursor: pointer;
+}
+.form .calendar .month-year {
+  font-weight: 600;
+  font-size: 1rem;
+}
+.weekdays,
+.days {
+  display: flex;
+  flex-wrap: wrap;
+}
+.days {
+  height: 240px;
+}
+
+.weekdays div,
+.days div {
+  width: 14.28%;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 5px;
+}
+
+.days div {
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.days div:hover {
+  background-color: #e8b10e;
+  color: #000;
+}
+.days .today {
+  border: 2px solid #e8b10e;
+  color: #000;
+}
+.days .today:hover {
+  border: 2px solid transparent;
+}
+.days .fade {
+  color: #555;
+}
+.days .selected {
+  background-color: #e8b10e;
+  color: #fff;
+  font-weight: 600;
+}
