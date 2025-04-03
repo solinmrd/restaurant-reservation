@@ -355,6 +355,60 @@
   .food-price {
     font-size: 0.9rem;
   }
+  dialog {
+    width: 92%;
+  }
+  
+  dialog .form {
+    width: 100%;
+    max-width:20rem;
+  }
+  .form .form-body .pagination .number {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: .8rem;
+  }
+  .form .form-body .pagination .bar {
+    width: 28px;
+    height: 2px;
+  }
+  .form .steps .step .grid {
+
+    grid-template-columns: 1fr;
+
+  }
+  .form .form-footer button {
+    width: 5rem;
+
+
+    font-size: .8rem;
+
+  }
+  .reserv-card {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 0.5rem;
+    /* width: 30rem; */
+    /* padding: 2rem; */
+    background-color: #fff;
+  }
+  
+  .faq {
+
+    border-bottom: 1px solid #000;
+
+  }
+  .question i {
+    font-size: .9rem;
+
+  }
+  .question h3{
+    font-size: 1rem;
+  }
+  .answer p{
+    font-size: .9rem;
+  }
 }
 
 /* mobile */
