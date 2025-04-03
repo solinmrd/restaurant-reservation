@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- IMPORT BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- IMPORT CSS FILES -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <!--  LINKING SWIPER CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- IMPORT GOOGLE ICONS -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,200,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+
+    <!-- IMPORT CDNJS HREF -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <title>Restaurant Reservation</title>
+  </head>
+  <body>
+    <!-- ---------------------------HEADER START HERE--------------------------- -->
+    <nav class="navbar navbar-dark fixed-top">
+      <div class="container-fluid">
+        <!-- logo -->
+        <a class="navbar-brand menu-logo" href="index.html">Restaurant</a>
+
+        <!-- menu -->
+        <div class="offcanvas-body menu">
+          <ul class="navbar-nav">
+            <li class="menu-item"><a href="index.html">Home</a></li>
+            <li class="menu-item"><a href="about.html">About</a></li>
+            <li class="menu-item"><a href="#service">Service</a></li>
+            <li class="menu-item"><a href="#menu">Menu</a></li>
+            <li class="menu-item"><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- mobile menu icon -->
+        <div class="nav-buttons">
+          <button class="btn btn-yellow" id="rezerv-popup" type="submit">
+            Book a table
+          </button>
+          <button class="btn btn-yellow-border" type="submit">login</button>
+        </div>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- mobile menu -->
+        <div
+          class="offcanvas offcanvas-end sidebar-menu"
+          tabindex="-1"
+          id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5
+              class="offcanvas-title sidebar-logo"
+              id="offcanvasDarkNavbarLabel"
+            >
+              Restaurant
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#service">Service</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#menu">Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+
+            <div class="flex-container social-media">
+              <div class="social-icon">
+                <a href="#"><i class="bi bi-facebook"></i></a>
+              </div>
+              <div class="social-icon">
+                <a href="#"><i class="bi bi-instagram"></i></a>
+              </div>
+              <div class="social-icon">
+                <a href="#"><i class="bi bi-youtube"></i></a>
+              </div>
+              <div class="social-icon">
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- ---------------------------HEADER END HERE--------------------------- -->
+
+    <!-- ---------------------------BANNER START HERE--------------------------- -->
+
+    <div class="banner">
+      <div class="col-12 banner-text">
+        <h2 id="banner-title">About us</h2>
+        <p id="banner-p">
+          <a href="index.html" class="banner-back">Home</a> / About us
+        </p>
+      </div>
+    </div>
+
+    <!-- ---------------------------BANNEER END HERE--------------------------- -->
+    <!-- ---------------------------SECTION START HERE--------------------------- -->
+
+    <section class="container section">
+      <!-- ---------------------------ABOUT START HERE--------------------------- -->
+
+      <div class="row my-5">
+        <div class="col-lg-5 col-sm-12 about-photo">
+          <!-- <img src="images/about/about-photo.png" alt=""> -->
+          <div class="row">
+            <div class="col-6">
+              <img src="images/about/photo4.jpg" alt="" />
+            </div>
+            <div class="col-6">
+              <div class="about-photo-80 first">
+                <img src="images/about/photo1.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="about-photo-80 second">
+                <img src="images/about/photo2.jpg" alt="" />
+              </div>
+            </div>
+            <div class="col-6">
+              <img src="images/about/photo3.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7 col-sm-12 about-paragraph">
+          <h2>Welcome to <span>Restaurant</span></h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci,
+            possimus vitae. Excepturi numquam sunt cum vitae quidem eos quo,
+            itaque tenetur laboriosam earum doloribus eius incidunt ipsam! Autem
+            placeat et assumenda ea non fuga, magni perferendis deserunt? Totam,
+            laudantium iste sit natus quae eum? Eum aliquid possimus dolorum ex
+            nostrum!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum ea
+            atque minima. Ex aut error, cumque est nihil odio quas quisquam,
+            exercitationem sed accusantium voluptatum corrupti debitis? Commodi
+            beatae necessitatibus soluta, magni illum quas explicabo.
+          </p>
+
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci,
+            possimus vitae. Excepturi numquam sunt cum vitae quidem eos quo,
+            itaque tenetur laboriosam earum doloribus eius incidunt ipsam! Autem
+            placeat et assumenda ea non fuga, magni perferendis deserunt? Totam,
+            laudantium iste sit natus quae eum? Eum aliquid possimus dolorum ex
+            nostrum!
+          </p>
+
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci,
+            possimus vitae. Excepturi numquam sunt cum vitae quidem eos quo,
+            itaque tenetur laboriosam earum doloribus eius incidunt ipsam! Autem
+            placeat et assumenda ea non fuga, magni perferendis deserunt? Totam,
+            laudantium iste sit natus quae eum? Eum aliquid possimus dolorum ex
+            nostrum!
+          </p>
+        </div>
+      </div>
+
+      <!-- ---------------------------ABOUT END HERE--------------------------- -->
+      <!-- ---------------------------TEAM START HERE--------------------------- -->
+      <div class="row m-xs-0">
+        <div class="section-title">
+          <h2>Our popular chefs <span></span></h2>
+          <h5>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, sit.
+          </h5>
+        </div>
+        <div class="team-section my-5">
+          <div class="col-lg-3 col-md-6 col-xs-12 col-sm-12 card">
+            <img
+              src="images/team/chef1.jpg"
+              class="card-img-top"
+              alt="Chef 1"
+            />
+            <div class="card-body">
+              <h3>John Doe</h3>
+              <h4>Western food chef</h4>
+            </div>
+
+            <div class="social-media">
+              <div class="social-media-item">
+                <i class="bi bi-facebook"></i>
+              </div>
+              <div class="social-media-item">
+                <i class="bi bi-instagram"></i>
+              </div>
+              <div class="social-media-item">
+                <i class="bi bi-threads"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-xs-12 col-sm-12 card">
+            <img
+              src="images/team/chef2.jpg"
+              class="card-img-top"
+              alt="Chef 1"
+            />
+            <div class="card-body">
+              <h3>John Doe</h3>
+              <h4>Oriental food chef</h4>
+            </div>
+
+            <div class="social-media">
+              <div class="social-media-item">
+                <i class="bi bi-facebook"></i>
+              </div>
+              <div class="social-media-item">
+                <i class="bi bi-instagram"></i>
+              </div>
+              <div class="social-media-item">
+                <i class="bi bi-threads"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-xs-12 col-sm-12 card">
+            <img
+              src="images/team/chef1.jpg"
+              class="card-img-top"
+              alt="Chef 1"
+            />
+            <div class="card-body">
+              <h3>John Doe</h3>
+              <h4>pastry chef</h4>
+            </div>
+
+            <div class="social-media">
+              <div class="social-media-item">
+                <i class="bi bi-facebook"></i>
+              </div>
+              <div class="social-media-item">
+                <i class="bi bi-instagram"></i>
+              </div>
+              <div class="social-media-item">
+                <i class="bi bi-threads"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-xs-12 col-sm-12 card">
+            <img
+              src="images/team/chef1.jpg"
+              class="card-img-top"
+              alt="Chef 1"
+            />
+            <div class="card-body">
+              <h3>John Doe</h3>
+              <h4>pastry chef</h4>
+            </div>
+
+            <div class="social-media">
+              <div class="social-media-item">
+                <i class="bi bi-facebook"></i>
+              </div>
+              <div class="social-media-item">
+                <i class="bi bi-instagram"></i>
+              </div>
+              <div class="social-media-item">
+                <i class="bi bi-threads"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---------------------------TEAM END HERE--------------------------- -->
+      <!-- ---------------------------FAQs END HERE--------------------------- -->
+      <div class="row">
+        <div class="section-title">
+          <h2>Frequently asked questions <span></span></h2>
+          <h5>Answers to all the questions you may have in your mind.</h5>
+        </div>
+        <div class="faq-section">
+          <div class="faq">
+            <div class="question">
+              <h3>Can I pay by credit card at the restaurant?</h3>
+              <i class="bi bi-chevron-down"></i>
+            </div>
+            <div class="answer">
+              <p>Yes, you can pay with Visa, Mastercard, Debit/Maestro card.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="question">
+              <h3>Does the restaurant serve Turkish cuisine?</h3>
+              <i class="bi bi-chevron-down"></i>
+            </div>
+            <div class="answer">
+              <p>Yes, Restaurant serves Turkish cuisine</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="question">
+              <h3>Does the restaurant serve Turkish cuisine?</h3>
+              <i class="bi bi-chevron-down"></i>
+            </div>
+            <div class="answer">
+              <p>Yes, Restaurant serves Turkish cuisine</p>
+            </div>
+          </div>
+
+          <div class="faq">
+            <div class="question">
+              <h3>Does the restaurant serve Turkish cuisine?</h3>
+              <i class="bi bi-chevron-down"></i>
+            </div>
+            <div class="answer">
+              <p>Yes, Restaurant serves Turkish cuisine</p>
+            </div>
+          </div>
+
+          <div class="faq">
+            <div class="question">
+              <h3>Does the restaurant serve Turkish cuisine?</h3>
+              <i class="bi bi-chevron-down"></i>
+            </div>
+            <div class="answer">
+              <p>Yes, Restaurant serves Turkish cuisine</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---------------------------FAQs END HERE--------------------------- -->
+
+      <!-- ---------------------------Reservation START HERE--------------------------- -->
+
+      <dialog>
+        <div class="close-btn">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="form">
+          <!--   
+          <div class="form-header">
+            <h2>Book a Table</h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni,
+              veniam obcaecati? Iste fugit recusandae quisquam perspiciatis
+              eligendi. Perferendis, ipsam doloribus.
+            </p>
+          </div> -->
+          <div class="form-body">
+            <div class="pagination">
+              <div class="number active">1</div>
+              <div class="bar"></div>
+              <div class="number">2</div>
+              <div class="bar"></div>
+              <div class="number">3</div>
+              <div class="bar"></div>
+              <div class="number">4</div>
+            </div>
+            <div class="steps">
+              <div class="step">
+                <h4>Contact details</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                <div class="grid">
+                  <div class="col">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" />
+                  </div>
+                  <div class="col">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" />
+                  </div>
+                  <div class="col">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" id="phone" />
+                  </div>
+                  <div class="col">
+                    <label for="message">Message</label>
+                    <input type="text" id="message" />
+                  </div>
+                </div>
+              </div>
+              <div class="step">
+                <h4>No Of People</h4>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Lorem ipsum dolor sit amet.
+                </p>
+                <div class="guest-count-selection reserv-card"></div>
+              </div>
+              <div class="step">
+                <h4>Reservation Date</h4>
+                <p></p>
+
+                <div class="calendar">
+                  <div class="calendar-header">
+                    <div id="prev" class="btn">
+                      <i class="fa-solid fa-arrow-left"></i>
+                    </div>
+                    <div class="month-year"></div>
+                    <div id="next" class="btn">
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                  </div>
+                  <div class="weekdays">
+                    <div>Sun</div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+                  </div>
+
+                  <div class="days"></div>
+                </div>
+              </div>
+
+              <div class="step">
+                <h4>Reservation Time</h4>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Lorem, ipsum dolor.
+                </p>
+
+                <div class="reserv-time-selection reserv-card">
+                  <!-- <div class="time-selection-item">
+                    <h3 class="time-selection-label"></h3>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-footer">
+            <button class="form-prev btn" disabled>Previous</button>
+            <button class="form-next btn" id="sendButton">Next</button>
+          </div>
+        </div>
+      </dialog>
+
+      <!-- ---------------------------Reservation END HERE--------------------------- -->
+    </section>
+    <!-- ---------------------------SECTION END HERE--------------------------- -->
+
+    <!-- ---------------------------FOOTER START HERE--------------------------- -->
+
+    <footer class="footer">
+      <div class="row">
+        <div class="col-lg-4 col-md-12">
+          <div class="footer-logo">
+            <a class="navbar-brand menu-logo" href="#home">Restaurant</a>
+          </div>
+          <div class="footer-about">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+              modi, animi non atque voluptate ut dolore ex eos. Tempora ipsa, a
+              consequatur adipisci alias unde!
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-12">
+          <h4>Pages</h4>
+          <ul>
+            <li>
+              <a href="index.html"><span class="line"></span>Home</a>
+            </li>
+            <li>
+              <a href="about.html"><span></span>About</a>
+            </li>
+            <li>
+              <a href="#service"><span></span>Service</a>
+            </li>
+            <li>
+              <a href="#menu"><span></span>menu</a>
+            </li>
+            <li>
+              <a href="contact"><span></span>contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-12">
+          <h4>Contact us</h4>
+          <ul>
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <span>İstanbul/Turkey</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i
+              ><span
+                ><a href="mailto:restaurant@gmail.com"
+                  >restaurant@gmail.com</a
+                ></span
+              >
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i
+              ><span><a href="tel:+905123456789">0512 345 67 89</a></span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-12">
+          <h4>Newsletter</h4>
+          <form action="" class="footer-enter-mail">
+            <input
+              type="email"
+              placeholder="Enter your email id"
+              class="enter-mail"
+              required
+            />
+            <button type="submit">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </form>
+          <div class="social-media-icons">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="copyright">
+      <div class="row">
+        <div class="copyright-text">
+          <p>Copyright © 2025 Restaurant. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+    <!-- ---------------------------FOOTER END HERE--------------------------- -->
+
+    <!-- IMPORT BOOTSTRAP JS -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- 
+
+    LINKING COUNTER JS
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script>
+      $(".counter").counterUp({
+        delay: 10,
+        time: 3000,
+      });
+    </script> -->
+
+    <!-- IMPORT RESERVATION JS -->
+    <script src="js/reservation.js"></script>
+
+    <!-- IMPORT FAQs JS -->
+    <script src="js/faq.js"></script>
+  </body>
+</html>
