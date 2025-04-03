@@ -40,13 +40,13 @@
     <nav class="navbar navbar-dark fixed-top">
       <div class="container-fluid">
         <!-- logo -->
-        <a class="navbar-brand menu-logo" href="#home">Restaurant</a>
+        <a class="navbar-brand menu-logo" href="index.html">Restaurant</a>
 
         <!-- menu -->
         <div class="offcanvas-body menu">
           <ul class="navbar-nav">
-            <li class="menu-item"><a href="#home">Home</a></li>
-            <li class="menu-item"><a href="#about">About</a></li>
+            <li class="menu-item"><a href="index.html">Home</a></li>
+            <li class="menu-item"><a href="about.html">About</a></li>
             <li class="menu-item"><a href="#service">Service</a></li>
             <li class="menu-item"><a href="#menu">Menu</a></li>
             <li class="menu-item"><a href="#contact">Contact</a></li>
@@ -55,7 +55,9 @@
 
         <!-- mobile menu icon -->
         <div class="nav-buttons">
-          <button class="btn btn-yellow" id="rezerv-popup" type="submit">Book a table</button>
+          <button class="btn btn-yellow rezerv-popup" type="submit">
+            Book a table
+          </button>
           <button class="btn btn-yellow-border" type="submit">login</button>
         </div>
 
@@ -95,10 +97,10 @@
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li class="nav-item">
-                <a class="nav-link" href="#home">Home</a>
+                <a class="nav-link" href="index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#about">About</a>
+                <a class="nav-link" href="about.html">About</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#service">Service</a>
@@ -342,10 +344,7 @@
             exercitationem sed accusantium voluptatum corrupti debitis? Commodi
             beatae necessitatibus soluta, magni illum quas explicabo.
           </p>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae ea
-            ipsum veniam aliquid nihil. Rem facere dolores id laborum ad.
-          </p>
+
           <div class="row counters p-3">
             <div class="col-lg-6 col-sm-12 counter-card">
               <div class="col-lg-4 counter-num">
@@ -366,6 +365,12 @@
                 <h4>reservation</h4>
               </div>
             </div>
+          </div>
+
+          <div class="booking-btn">
+            <button class="btn btn-yellow rezerv-popup" type="submit">
+              Book a table
+            </button>
           </div>
         </div>
       </div>
@@ -791,13 +796,13 @@
 
       <!-- ---------------------------MENu END HERE--------------------------- -->
       <!-- ---------------------------Reservation START HERE--------------------------- -->
-     
-       <dialog>
+
+      <dialog>
         <div class="close-btn">
           <i class="fa-solid fa-xmark"></i>
         </div>
         <div class="form">
-<!--   
+          <!--   
           <div class="form-header">
             <h2>Book a Table</h2>
             <p>
@@ -842,15 +847,15 @@
               <div class="step">
                 <h4>No Of People</h4>
                 <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem
-                  ipsum dolor sit amet.
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Lorem ipsum dolor sit amet.
                 </p>
                 <div class="guest-count-selection reserv-card"></div>
               </div>
               <div class="step">
                 <h4>Reservation Date</h4>
                 <p></p>
-  
+
                 <div class="calendar">
                   <div class="calendar-header">
                     <div id="prev" class="btn">
@@ -870,18 +875,18 @@
                     <div>Fri</div>
                     <div>Sat</div>
                   </div>
-  
+
                   <div class="days"></div>
                 </div>
               </div>
-  
+
               <div class="step">
                 <h4>Reservation Time</h4>
                 <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem,
-                  ipsum dolor.
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Lorem, ipsum dolor.
                 </p>
-  
+
                 <div class="reserv-time-selection reserv-card">
                   <!-- <div class="time-selection-item">
                     <h3 class="time-selection-label"></h3>
@@ -895,7 +900,7 @@
             <button class="form-next btn" id="sendButton">Next</button>
           </div>
         </div>
-       </dialog>
+      </dialog>
 
       <!-- ---------------------------Reservation END HERE--------------------------- -->
     </section>
@@ -903,7 +908,90 @@
 
     <!-- ---------------------------FOOTER START HERE--------------------------- -->
 
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <div class="row">
+        <div class="col-lg-4 col-md-12">
+          <div class="footer-logo">
+            <a class="navbar-brand menu-logo" href="#home">Restaurant</a>
+          </div>
+          <div class="footer-about">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+              modi, animi non atque voluptate ut dolore ex eos. Tempora ipsa, a
+              consequatur adipisci alias unde!
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-12">
+          <h4>Pages</h4>
+          <ul>
+            <li>
+              <a href="index.html"><span class="line"></span>Home</a>
+            </li>
+            <li>
+              <a href="about.html"><span></span>About</a>
+            </li>
+            <li>
+              <a href="#service"><span></span>Service</a>
+            </li>
+            <li>
+              <a href="#menu"><span></span>menu</a>
+            </li>
+            <li>
+              <a href="contact"><span></span>contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-12">
+          <h4>Contact us</h4>
+          <ul>
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <span>İstanbul/Turkey</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i
+              ><span
+                ><a href="mailto:restaurant@gmail.com"
+                  >restaurant@gmail.com</a
+                ></span
+              >
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i
+              ><span><a href="tel:+905123456789">0512 345 67 89</a></span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-12">
+          <h4>Newsletter</h4>
+          <form action="" class="footer-enter-mail">
+            <input
+              type="email"
+              placeholder="Enter your email id"
+              class="enter-mail"
+              required
+            />
+            <button type="submit">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </form>
+          <div class="social-media-icons">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="copyright">
+      <div class="row">
+        <div class="copyright-text">
+          <p>Copyright © 2025 Restaurant. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
     <!-- ---------------------------FOOTER END HERE--------------------------- -->
 
     <!-- IMPORT BOOTSTRAP JS -->
