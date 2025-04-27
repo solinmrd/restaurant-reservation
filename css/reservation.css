@@ -1,0 +1,101 @@
+/* .popup {
+  width: 350px;
+  height: 280px;
+  padding: 30px 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-sizing: border-box;
+  z-index: 2;
+  text-align: center;
+  opacity: 0;
+  top: -200%;
+  transform: translate(-50%, -50%) scale(0.5);
+  transition: opacity 300ms ease-in-out, top 1000ms ease-in-out, transfrom 1000ms ease-in-out;
+}
+.popup.active{
+    opacity: 1;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transfrom 300ms cubic-bezier(0.15, 0.89, 0.43, 1.19);
+} */
+.popup.center.active {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  z-index: 10000;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Popup arkası için (isteğe bağlı arka plan karartması) */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  width: 100dvw;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+}
+.popup .state-popup-icon {
+  margin: 5px 0px;
+  width: 50px;  
+  height: 50px;
+  text-align: center;
+  font-size: 30px;
+  display: inline-block;
+  line-height: 60px;
+}
+.popup .state-popup-icon.success-icon {
+  border: 2px solid #34f234;
+  border-radius: 50%;
+}
+.popup .state-popup-icon.err-icon {
+  /* hata iconu */
+  /* border: 2px solid #f23434; */
+  font-size: 45px!important;
+  margin: 10px 0px!important;
+}
+
+.popup .state-popup-icon.success-icon i.fa {
+  color: #34f234;
+}
+.popup .state-popup-icon.err-icon i.fa {
+  color: #f23434;
+}
+.popup .state-title{
+  margin: 5px 0px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.popup .state-description {
+  color: #000;
+  font-size: 1rem;
+  padding: 5px;
+}
+.popup .okDiv {
+  margin-top: 15px;
+}
+.popup .ok-popup-btn {
+  padding: 10px 40px;
+  margin: 20px 0px;
+  background-color: #000;
+  color: #f5f5f5;
+  border: 2px solid #000;
+  font-size: 1rem;
+  font-weight: 600;
+  outline: none;
+  border-radius: 20px;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+}
+.popup .ok-popup-btn:hover {
+  background-color: #f5f5f5;
+  color: #000;
+}

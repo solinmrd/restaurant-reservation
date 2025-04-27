@@ -1,0 +1,206 @@
+.container {
+  height: 100vh;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.login-container {
+  width: 80%;
+  height: 70vh;
+  box-shadow: 2px 4px 25px 1px #3c3c3ca2;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+.user-sign-in-form,
+.admin-sign-in-form {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  top: 0;
+  left: 0;
+  background: #fff;
+  transition: all 0.5s ease-in-out;
+  padding: 0;
+}
+
+.admin-sign-in-form {
+  background: #fff;
+  transform: translateX(100%);
+  opacity: 0;
+  z-index: 1;
+}
+
+.user-sign-in-form.active-form {
+  transform: translateX(0);
+  opacity: 1;
+  z-index: 2;
+}
+
+.admin-sign-in-form.active-form {
+  transform: translateX(0);
+  opacity: 1;
+  z-index: 2;
+}
+
+.user-sign-in-form.slide-left {
+  transform: translateX(-100%);
+  opacity: 0;
+  z-index: 1;
+}
+
+.admin-sign-in-form.slide-right {
+  transform: translateX(100%);
+  opacity: 0;
+  z-index: 1;
+}
+
+.user-sign-in-form div,
+.admin-sign-in-form div {
+  position: relative;
+  float: left;
+}
+
+.user-sign-in-form .user-sign-in,
+.admin-sign-in-form .admin-sign-in {
+  width: 60%;
+  height: 100%;
+  background-color: #fff;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.user-sign-in-form form,
+.admin-sign-in-form form {
+  width: 95%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+p {
+  text-align: center;
+  width: 80%;
+}
+
+input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0px;
+  border: 2px solid #eee;
+  outline: none;
+}
+
+input:focus {
+  border-bottom: 2px solid #000;
+}
+
+/* .password-container {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+} */
+
+.pass-div {
+  width: 80%;
+  display: flex;
+  justify-items: start;
+  text-align: left;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.pass-div input {
+  width: auto;
+  margin-right: 0.5rem;
+}
+input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+}
+
+button {
+  padding: 8px;
+  border-radius: 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-top: 0.5rem;
+}
+
+.dark-btn {
+  width: 25%;
+  outline: none;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+
+.dark-btn:hover {
+  background-color: #e8b10e;
+  color: #000;
+}
+
+.right-side {
+  background-color: #e8b10e;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-side .right-side-item {
+  text-align: center;
+}
+
+.right-side .right-side-item h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.right-side .right-side-item p {
+  padding: 0rem 2rem;
+  width: 100%;
+  font-size: 0.8rem;
+  color: #fff;
+  margin-top: 0.5rem;
+}
+
+.light-btn {
+  width: 40%;
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+
+.light-btn:hover {
+  background-color: #fff;
+  color: #e8b10e;
+}
+.top-btn-text{
+  display: none;
+  font-size: .8rem;
+  color: #eee;
+  font-weight: 400;
+  margin: 1.5rem 0 .4rem;
+}
+

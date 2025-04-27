@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+}
+body {
+  background-color: #eee;
+}
+.container-fluid {
+  display: flex;
+}
+nav {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 20%;
+  height: 100vh;
+  background-color: #000;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
+}
+ul.navbar-head {
+  padding: 0px;
+}
+.navbar-head > .logo {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #e8b10e;
+  padding-left: 2rem;
+  margin-top: 2rem;
+  /* display: flex; */
+}
+.navbar-head > .dash-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #eee;
+  text-transform: capitalize;
+  /* margin-bottom: 2rem; */
+}
+.navbar-head > .dash-text > span {
+  text-align: left;
+  width: 1.7rem;
+  height: 1px;
+  background-color: #eee;
+  display: inline-block;
+  margin: 8px 5px 8px 0px;
+}
+
+li {
+  list-style-type: none;
+}
+a {
+  position: relative;
+  text-decoration: none;
+  font-size: 1rem;
+  color: #eee;
+  padding: 10px;
+}
+ul.navbar-body {
+  padding: 0px;
+  margin-top: 2rem;
+}
+
+ul.navbar-body > .nav-item {
+  position: relative;
+  width: 100%;
+  padding: 1rem 1rem 1rem 1.5rem;
+  transition: all 0.5s ease-in-out;
+}
+ul.navbar-body > li i.fa-solid,
+ul.navbar-body > li span {
+  transition: all 0.5s ease-in-out;
+}
+ul.navbar-body > li span {
+  margin: 0;
+  padding-right: 0px;
+}
+ul.navbar-body > li:hover {
+  margin-left: 0.6rem;
+  cursor: pointer;
+}
+ul.navbar-body > li.nav-item.active {
+  background-color: #e8b10e;
+  color: #fff;
+}
+ul.navbar-body > li.nav-item.active:hover {
+  margin-left: 0rem;
+}
+ul.navbar-body > li.nav-item.active:hover i.fa-solid,
+ul.navbar-body > li.nav-item.active:hover span {
+  color: #eee !important;
+}
+ul.navbar-body > li:hover i.fa-solid,
+ul.navbar-body > li:hover span {
+  color: #e8b10e !important;
+}
+
+.nav-item a::before {
+  width: 0;
+  height: 0px;
+}
+.nav-item a:hover::before {
+  width: 0%;
+}
+.fa-solid {
+  font-size: 1.3rem;
+  color: #eee;
+}
+ul.navbar-footer {
+  margin-top: auto; /*Bunu ekleyince en alta gider */
+}
+ul.navbar-footer > .nav-item {
+  transition: all 0.5s ease-in-out;
+}
+ul.navbar-footer > .nav-item:hover {
+  margin-left: 0.6rem;
+  cursor: pointer;
+}
+ul.navbar-footer > .nav-item:hover i.fa-solid,
+ul.navbar-footer > .nav-item:hover span {
+  color: #e8b10e !important;
+}

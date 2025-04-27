@@ -92,6 +92,13 @@ nav {
   background-color: #e8b10e;
   color: #000;
 }
+.btn-yellow-border a{
+  color: #e8b10e;
+  text-decoration: none;
+}
+.btn-yellow-border a:hover{
+  color: #000;
+}
 .navbar-toggler {
   display: none;
   margin-right: 1rem;
@@ -932,6 +939,7 @@ dialog .form {
   color: #fff;
   font-weight: 600;
 }
+
 
 /* --------------------------------------------------FOOTER STYLE START HERE*/
 .footer {

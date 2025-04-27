@@ -292,7 +292,7 @@
 }
 
 /* ----------------------------------------------------- */
-/* DEFAULR SIZES RESPONSIVE */
+/* DEFAULT SIZES RESPONSIVE */
 
 /* small mobile */
 @media screen and (max-width: 480px) {
@@ -358,32 +358,28 @@
   dialog {
     width: 92%;
   }
-  
+
   dialog .form {
     width: 100%;
-    max-width:20rem;
+    max-width: 20rem;
   }
   .form .form-body .pagination .number {
     width: 20px;
     height: 20px;
     line-height: 20px;
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
   .form .form-body .pagination .bar {
     width: 28px;
     height: 2px;
   }
   .form .steps .step .grid {
-
     grid-template-columns: 1fr;
-
   }
   .form .form-footer button {
     width: 5rem;
 
-
-    font-size: .8rem;
-
+    font-size: 0.8rem;
   }
   .reserv-card {
     display: grid;
@@ -393,22 +389,21 @@
     /* padding: 2rem; */
     background-color: #fff;
   }
-  
+
   .faq {
-
     border-bottom: 1px solid #000;
-
   }
   .question i {
-    font-size: .9rem;
-
+    font-size: 0.9rem;
   }
-  .question h3{
+  .question h3 {
     font-size: 1rem;
   }
-  .answer p{
-    font-size: .9rem;
+  .answer p {
+    font-size: 0.9rem;
   }
+
+  /* -------------------------------------------------LOGIN.CSS RESPONSIVE-------------------------------- */
 }
 
 /* mobile */
@@ -525,3 +520,211 @@
     height: 25rem;
   }
 }
+/* ---------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .dark-btn {
+    width: 45%;
+  }
+  .light-btn {
+    width: 60%;
+  }
+}
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 992px) {
+  .login-container {
+    width: 95%;
+    height: 80vh;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  p {
+    text-align: center;
+    width: 90%;
+    font-size: 0.9rem;
+  }
+  input {
+    width: 90%;
+    padding: 6px;
+    margin: 8px 0px;
+  }
+  .password-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    margin: 0;
+  }
+  .pass-div {
+    width: 88%;
+    font-size: 0.9rem;
+  }
+  button {
+    padding: 6px;
+    font-size: 0.9rem;
+  }
+  .dark-btn {
+    width: 35%;
+  }
+  .right-side .right-side-item h1 {
+    font-size: 2rem;
+  }
+  .right-side .right-side-item p {
+    padding: 0rem 1rem;
+  }
+  .light-btn {
+    width: 60%;
+  }
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="tel"] {
+    font-size: 0.9rem;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+  p {
+    width: 85%;
+    font-size: 0.8rem;
+  }
+
+  input {
+    width: 80%;
+    padding: 9px;
+  }
+  .password-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    margin: 0;
+  }
+  .pass-div {
+    width: 78%;
+    font-size: 0.8rem;
+  }
+  button {
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+  .dark-btn {
+    width: 35%;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="tel"] {
+    font-size: 0.8rem;
+  }
+
+  .right-side {
+    display: none;
+  }
+  .user-sign-in-form .user-sign-in,
+  .admin-sign-in-form .admin-sign-in {
+    width: 100%;
+    background-color: transparent !important;
+    backdrop-filter: blur(30px);
+  }
+  .user-sign-in-form,
+  .admin-sign-in-form {
+    background: transparent;
+  }
+
+  .top-btn-text {
+    display: block;
+  }
+  /* body {
+    background: linear-gradient(250deg, #eee 0%, #e8b10e 50%, #eee 100%);
+  } */
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 576px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+  p {
+    width: 90%;
+    font-size: 0.7rem;
+  }
+
+  input {
+    width: 95%;
+    padding: 7px;
+    background-color: transparent;
+    border-bottom: 1px solid #000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+
+  .pass-div {
+    width: 94%;
+    font-size: 0.7rem;
+  }
+  button {
+    padding: 8px;
+    font-size: 0.8rem;
+  }
+  .dark-btn {
+    width: 50%;
+  }
+  input[type="checkbox"] {
+    accent-color: #eee;
+    cursor: pointer;
+    width: 0.7rem;
+    height: 0.7rem;
+  }
+
+  
+
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="tel"] {
+    font-size: 0.8rem;
+  }
+
+  .right-side {
+    display: none;
+  }
+  .user-sign-in-form .user-sign-in,
+  .admin-sign-in-form .admin-sign-in {
+    width: 100%;
+    background-color: transparent !important;
+    backdrop-filter: blur(30px);
+  }
+  .user-sign-in-form,
+  .admin-sign-in-form {
+    /* background: transparent;
+     */
+     background-color: transparent !important;
+  }
+
+  .top-btn-text {
+    display: block;
+  }
+  body {
+
+    background-color: #eee;
+    background: linear-gradient(180deg, #eee 0%, #e8b10e 100%);
+
+  }
+  .top-btn-text{
+    display: block;
+    font-size: .7rem;
+    color: #fff;
+    font-weight: 400;
+
+  }
+  
+}
+
+
