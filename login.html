@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+
+    <!-- IMPORT BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <!-- IMPORT CSS FILES -->
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- IMPORT FONTAWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="row login-container">
+  
+        <!-- USER FORM -->
+        <div class="user-sign-in-form active-form">
+      
+          <div class="col-xl-7 user-sign-in">
+          
+            <form action="">
+            
+              <h1>User Log In</h1>
+              <p>
+                Welcome to the restaurant reservation system.<br />
+                Please log in to view your past reservations and manage your
+                current reservations.
+              </p>
+              <input
+                type="text"
+                placeholder="Your Name"
+                class="input-name"
+                id="name"
+              />
+              <input
+                type="email"
+                inputmode="email"
+                placeholder="Email"
+                class="input-email"
+                id="email"
+              />
+              <input
+                type="tel"
+                inputmode="tel"
+                placeholder="Phone Number"
+                class="input-phone"
+                id="phone"
+              />
+              <label for="" class="top-btn-text" id="are-you-admin">Are you Admin? Click Here! </label>
+              <button
+                type="button"
+                class="dark-btn sign-in-btn"
+                id="user-sign-btn"
+              >
+                Sign In
+              </button>
+            </form>
+          </div>
+
+          <div class="col-xl-5 right-side">
+            <div class="right-side-item">
+              <h1>Restaurant</h1>
+              <p>
+                Are you an admin? Log in to access the admin dashboard and
+                manage the restaurant's operations efficiently.
+              </p>
+              <button type="button" class="light-btn admin-btn">
+                Admin Log In
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ADMIN FORM -->
+        <div class="admin-sign-in-form">
+          <div class="col-xl-5 right-side">
+            <div class="right-side-item">
+              <h1>Restaurant</h1>
+              <p>
+                Are you a user? Log in to view your past reservations and manage
+                your current reservations.
+              </p>
+              <button type="button" class="light-btn user-btn">
+                User Login
+              </button>
+            </div>
+          </div>
+
+          <div class="col-xl-7 admin-sign-in">
+            <form action="">
+              <h1>Admin Log In</h1>
+              <p>
+                Welcome admin! Please log in to access and manage the
+                restaurant's operations.
+              </p>
+              <input
+                type="text"
+                placeholder="Username"
+                class="input-name"
+                id="username"
+              />
+              <input
+                type="password"
+                placeholder="Password"
+                class="input-email"
+                id="password"
+              />
+              <div class="pass-div">
+                <input
+                  type="checkbox"
+                  onclick="showPassword()"
+                  class="show-pass-input"
+                />
+                <label for="">Show Password</label>
+              </div>
+              <label for="" class="top-btn-text" id="are-you-user">Are you User? Click Here! </label>
+              <button
+                type="button"
+                class="dark-btn sign-in-btn"
+                id="admin-sign-btn"
+              >
+                Sign In
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JS FILES -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/login.js"></script>
+  </body>
+</html>

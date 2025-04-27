@@ -12,6 +12,7 @@
     <!-- IMPORT CSS FILES -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/reservation.css" />
 
     <!--  LINKING SWIPER CSS -->
     <link
@@ -46,7 +47,7 @@
         <div class="offcanvas-body menu">
           <ul class="navbar-nav">
             <li class="menu-item"><a href="index.html">Home</a></li>
-            <li class="menu-item"><a href="about.html">About</a></li>
+            <li class="menu-item"><a href="../src/about.html">About</a></li>
             <li class="menu-item"><a href="#service">Service</a></li>
             <li class="menu-item"><a href="#menu">Menu</a></li>
             <li class="menu-item"><a href="#contact">Contact</a></li>
@@ -58,7 +59,9 @@
           <button class="btn btn-yellow rezerv-popup" type="submit">
             Book a table
           </button>
-          <button class="btn btn-yellow-border" type="submit">login</button>
+          <button class="btn btn-yellow-border" type="submit" id="admin-login">
+            <a href="login.html"> login</a>
+          </button>
         </div>
 
         <button
@@ -100,7 +103,7 @@
                 <a class="nav-link" href="index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
+                <a class="nav-link" href="../src/about.html">About</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#service">Service</a>
@@ -794,8 +797,8 @@
         </div>
       </div>
 
-      <!-- ---------------------------MENu END HERE--------------------------- -->
-      <!-- ---------------------------Reservation START HERE--------------------------- -->
+      <!-- ---------------------------MENU END HERE--------------------------- -->
+      <!-- ---------------------------RESERVATION START HERE--------------------------- -->
 
       <dialog>
         <div class="close-btn">
@@ -824,7 +827,7 @@
             <div class="steps">
               <div class="step">
                 <h4>Contact details</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                <p>Please enter your information</p>
                 <div class="grid">
                   <div class="col">
                     <label for="name">Name</label>
@@ -836,7 +839,15 @@
                   </div>
                   <div class="col">
                     <label for="phone">Phone Number</label>
-                    <input type="text" id="phone" />
+                    <input
+                      type="tel"
+                      id="phone"
+                      inputmode="numeric"
+                      pattern="0[0-9]{9}"
+                      placeholder="05XXXXXXXXX"
+                      maxlength="11"
+                      title="Please enter a 11-digit number starting with 0"
+                    />
                   </div>
                   <div class="col">
                     <label for="message">Message</label>
@@ -847,8 +858,8 @@
               <div class="step">
                 <h4>No Of People</h4>
                 <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Lorem ipsum dolor sit amet.
+                  Please select how many people will attend the reservation. You
+                  can choose between 1 and 10 guests.
                 </p>
                 <div class="guest-count-selection reserv-card"></div>
               </div>
@@ -883,8 +894,8 @@
               <div class="step">
                 <h4>Reservation Time</h4>
                 <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Lorem, ipsum dolor.
+                  Please choose a time slot for your reservation. Available
+                  hours range from 13:00 to 21:00.
                 </p>
 
                 <div class="reserv-time-selection reserv-card">
@@ -902,7 +913,7 @@
         </div>
       </dialog>
 
-      <!-- ---------------------------Reservation END HERE--------------------------- -->
+      <!-- ---------------------------RESERVATION END HERE--------------------------- -->
     </section>
     <!-- ---------------------------SECTION END HERE--------------------------- -->
 
@@ -929,7 +940,7 @@
               <a href="index.html"><span class="line"></span>Home</a>
             </li>
             <li>
-              <a href="about.html"><span></span>About</a>
+              <a href="../src/about.html"><span></span>About</a>
             </li>
             <li>
               <a href="#service"><span></span>Service</a>
@@ -1017,5 +1028,8 @@
 
     <!-- IMPORT RESERVATION JS -->
     <script src="js/reservation.js"></script>
+
+    <!-- IMPORT ADMIN LOGIN JS -->
+    <script src="js/admin-login.js"></script>
   </body>
 </html>
