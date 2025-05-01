@@ -711,7 +711,7 @@
   .top-btn-text {
     display: block;
   }
-  body {
+  .login-body {
 
     background-color: #eee;
     background: linear-gradient(180deg, #eee 0%, #e8b10e 100%);
