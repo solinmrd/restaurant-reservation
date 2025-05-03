@@ -64,16 +64,27 @@
           </button>
         </div>
 
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasDarkNavbar"
-          aria-controls="offcanvasDarkNavbar"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <div class="mobile-header">
+          <div class="rezerv-popup" id="book-table">
+            <i class="fa-solid fa-calendar"></i>
+          </div>
+          <div class="login" id="login">
+            <a href="login.html"> <i class="fa-solid fa-user"></i></a>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasDarkNavbar"
+            aria-controls="offcanvasDarkNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      
+
+       
 
         <!-- mobile menu -->
         <div
@@ -898,7 +909,7 @@
                   hours range from 13:00 to 21:00.
                 </p>
 
-                <div class="reserv-time-selection reserv-card">
+                <div class="reserv-time-selection reserv-card time-card">
                   <!-- <div class="time-selection-item">
                     <h3 class="time-selection-label"></h3>
                   </div> -->
@@ -1004,6 +1015,7 @@
       </div>
     </div>
     <!-- ---------------------------FOOTER END HERE--------------------------- -->
+
 
     <!-- IMPORT BOOTSTRAP JS -->
     <script src="js/bootstrap.min.js"></script>
