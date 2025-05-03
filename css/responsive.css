@@ -9,9 +9,33 @@
   .nav-buttons {
     display: none;
   }
+  .mobile-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 35%;
+  }
   .menu-logo {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     padding-left: 0;
+  }
+  #book-table{
+    display: block;
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.929);
+  }
+  #login{
+
+    display: block;
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.929);
+  }
+  #login a{
+    color: rgba(255, 255, 255, 0.929);
+    text-decoration: none;
+  }
+  .navbar-toggler-icon{
+    color: aqua;
   }
   .about-paragraph {
     padding: 1rem;
@@ -293,6 +317,12 @@
 
 /* ----------------------------------------------------- */
 /* DEFAULT SIZES RESPONSIVE */
+/* the smaller device */
+@media screen and (min-width:320px) and (max-width:360px){
+  .login-container{
+    height: 68vh;
+  }
+}
 
 /* small mobile */
 @media screen and (max-width: 480px) {
@@ -356,16 +386,20 @@
     font-size: 0.9rem;
   }
   dialog {
-    width: 92%;
+    width: 90%;
+    padding:0em;
   }
 
   dialog .form {
-    width: 100%;
-    max-width: 20rem;
+    width: 80%;
+    max-width: 18rem;
+  }
+  .form .form-body{
+    height: 27rem;
   }
   .form .form-body .pagination .number {
     width: 20px;
-    height: 20px;
+    height: 18px;
     line-height: 20px;
     font-size: 0.8rem;
   }
@@ -373,8 +407,23 @@
     width: 28px;
     height: 2px;
   }
+  .form .steps .step{
+    width: 85vw;
+    max-width: 20rem;
+    padding: 0px;
+    overflow: hidden;
+  }
   .form .steps .step .grid {
     grid-template-columns: 1fr;
+    gap: 0rem;
+  }
+  .form .steps .step p{
+    text-align: justify;
+    width: 100%;
+    font-size: 0.8rem;
+  }
+  .form .steps .step h4{
+    font-size: 1.1rem;
   }
   .form .form-footer button {
     width: 5rem;
@@ -389,7 +438,13 @@
     /* padding: 2rem; */
     background-color: #fff;
   }
-
+  .reserv-card .selection-item{
+    height: 2.5rem;
+  }
+  .time-card .selection-item{
+    height: 1.4rem;
+    padding: 0.2rem;
+  }
   .faq {
     border-bottom: 1px solid #000;
   }
@@ -402,251 +457,17 @@
   .answer p {
     font-size: 0.9rem;
   }
-
+  dialog .close-btn{
+    padding: 1rem 1rem 0 0 !important;
+  }
   /* -------------------------------------------------LOGIN.CSS RESPONSIVE-------------------------------- */
-}
-
-/* mobile */
-@media screen and (min-width: 481px) and (max-width: 767px) {
-  .team-section {
-    display: block;
-    padding: 0;
-    justify-items: center;
+  .icon-contianer{
+    height: 10%;
+    left: 2rem;
   }
-  .team-section .card {
-    margin-bottom: 1.5rem;
+  .back-arrow>a{
+    font-size: 1.2rem;
   }
-}
-/* Ipad */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .team-section {
-    display: grid;
-    grid-template-columns: 45% 45%;
-    gap: 2rem;
-  }
-  .team-section .card {
-    width: 100%;
-    padding: 0rem;
-  }
-  .team-section .card:hover {
-    height: 27rem;
-  }
-  .team-section .card .social-media {
-    margin: 0rem 0rem 2rem;
-  }
-
-  .food-menu {
-    width: 90%;
-  }
-
-  .food-menu .tabs-box .tab-btn {
-    font-size: 0.8rem;
-  }
-  .food-menu .line {
-    top: 3.5rem;
-    left: 1.5rem;
-    width: 5.5rem;
-  }
-  .food-menu .content-box {
-    padding: 0.8rem;
-  }
-  .food-item img {
-    width: 70px;
-    height: 70px;
-  }
-  .food-details h1 {
-    font-size: 0.9rem;
-  }
-  .food-details p {
-    font-size: 0.6rem;
-  }
-  .food-price {
-    font-size: 0.9rem;
-  }
-}
-
-/* laptop */
-@media screen and (min-width: 1024px) and (max-width: 1366px) {
-  .team-section {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    gap: 1rem;
-  }
-  .team-section .card {
-    width: 100%;
-    height: 19rem;
-  }
-  .team-section .card:hover {
-    height: 22rem;
-  }
-
-  .food-menu {
-    width: 90%;
-  }
-
-  .food-menu .tabs-box .tab-btn {
-    font-size: 1rem;
-  }
-  .food-menu .line {
-    left: 1.8rem;
-  }
-
-  .food-item img {
-    width: 75px;
-    height: 75px;
-  }
-  .food-details h1 {
-    font-size: 1rem;
-  }
-  .food-details p {
-    font-size: 0.8rem;
-  }
-  .food-price {
-    font-size: 1rem;
-  }
-}
-/* other screen */
-@media screen and (min-width: 1366px) {
-  .team-section {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    gap: 1rem;
-  }
-  .team-section .card {
-    width: 100%;
-    height: 23rem;
-  }
-  .team-section .card:hover {
-    height: 25rem;
-  }
-}
-/* ---------------------------------------------------------------------------- */
-@media (max-width: 1200px) {
-  .dark-btn {
-    width: 45%;
-  }
-  .light-btn {
-    width: 60%;
-  }
-}
-/* Medium devices (tablets, 768px and up) */
-@media (max-width: 992px) {
-  .login-container {
-    width: 95%;
-    height: 80vh;
-  }
-  h1 {
-    font-size: 1.5rem;
-  }
-  p {
-    text-align: center;
-    width: 90%;
-    font-size: 0.9rem;
-  }
-  input {
-    width: 90%;
-    padding: 6px;
-    margin: 8px 0px;
-  }
-  .password-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: left;
-    margin: 0;
-  }
-  .pass-div {
-    width: 88%;
-    font-size: 0.9rem;
-  }
-  button {
-    padding: 6px;
-    font-size: 0.9rem;
-  }
-  .dark-btn {
-    width: 35%;
-  }
-  .right-side .right-side-item h1 {
-    font-size: 2rem;
-  }
-  .right-side .right-side-item p {
-    padding: 0rem 1rem;
-  }
-  .light-btn {
-    width: 60%;
-  }
-  input[type="text"],
-  input[type="password"],
-  input[type="email"],
-  input[type="tel"] {
-    font-size: 0.9rem;
-  }
-}
-
-/* Small devices (landscape phones, 576px and up) */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 1.4rem;
-  }
-  p {
-    width: 85%;
-    font-size: 0.8rem;
-  }
-
-  input {
-    width: 80%;
-    padding: 9px;
-  }
-  .password-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: left;
-    margin: 0;
-  }
-  .pass-div {
-    width: 78%;
-    font-size: 0.8rem;
-  }
-  button {
-    padding: 10px;
-    font-size: 0.8rem;
-  }
-  .dark-btn {
-    width: 35%;
-  }
-
-  input[type="text"],
-  input[type="password"],
-  input[type="email"],
-  input[type="tel"] {
-    font-size: 0.8rem;
-  }
-
-  .right-side {
-    display: none;
-  }
-  .user-sign-in-form .user-sign-in,
-  .admin-sign-in-form .admin-sign-in {
-    width: 100%;
-    background-color: transparent !important;
-    backdrop-filter: blur(30px);
-  }
-  .user-sign-in-form,
-  .admin-sign-in-form {
-    background: transparent;
-  }
-
-  .top-btn-text {
-    display: block;
-  }
-  /* body {
-    background: linear-gradient(250deg, #eee 0%, #e8b10e 50%, #eee 100%);
-  } */
-}
-
-/* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 576px) {
   h1 {
     font-size: 1.2rem;
   }
@@ -711,7 +532,7 @@
   .top-btn-text {
     display: block;
   }
-  .login-body {
+  .login-body{
 
     background-color: #eee;
     background: linear-gradient(180deg, #eee 0%, #e8b10e 100%);
@@ -727,4 +548,270 @@
   
 }
 
+/* mobile */
+@media screen and (min-width: 481px) and (max-width: 769px) {
+  .team-section {
+    display: block;
+    padding: 0;
+    justify-items: center;
+  }
+  .team-section .card {
+    margin-bottom: 1.5rem;
+  }
+  .mobile-header {
+    width: 18%;
+  }
+  .icon-contianer {
+    height: 12%;
+    left: 2rem;
+  }
+  h1 {
+    font-size: 1.4rem;
+  }
+  p {
+    width: 85%;
+    font-size: 0.8rem;
+  }
 
+  input {
+    width: 80%;
+    padding: 9px;
+  }
+  .password-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    margin: 0;
+  }
+  .pass-div {
+    width: 78%;
+    font-size: 0.8rem;
+  }
+  button {
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+  .dark-btn {
+    width: 35%;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="tel"] {
+    font-size: 0.8rem;
+  }
+
+  .right-side {
+    display: none;
+  }
+  .user-sign-in-form .user-sign-in,
+  .admin-sign-in-form .admin-sign-in {
+    width: 100%;
+    background-color: transparent !important;
+    backdrop-filter: blur(30px);
+  }
+  .user-sign-in-form,
+  .admin-sign-in-form {
+    background: transparent;
+  }
+
+  .top-btn-text {
+    display: block;
+  }
+  .login-body{
+      
+    background-color: #eee;
+    background: linear-gradient(180deg, #eee 0%, #e8b10e 100%);
+  }
+
+}
+/* Ipad */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .team-section {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    gap: 2rem;
+  }
+  .team-section .card {
+    width: 100%;
+    padding: 0rem;
+  }
+  .team-section .card:hover {
+    height: 27rem;
+  }
+  .team-section .card .social-media {
+    margin: 0rem 0rem 2rem;
+  }
+
+  .food-menu {
+    width: 90%;
+  }
+
+  .food-menu .tabs-box .tab-btn {
+    font-size: 0.8rem;
+  }
+  .food-menu .line {
+    top: 3.5rem;
+    left: 1.5rem;
+    width: 5.5rem;
+  }
+  .food-menu .content-box {
+    padding: 0.8rem;
+  }
+  .food-item img {
+    width: 70px;
+    height: 70px;
+  }
+  .food-details h1 {
+    font-size: 0.9rem;
+  }
+  .food-details p {
+    font-size: 0.6rem;
+  }
+  .food-price {
+    font-size: 0.9rem;
+  }
+  .form .form-body{
+     height: 25rem;
+  }
+  .time-card .selection-item{
+    height: 1.5rem;
+    padding: 0.2rem;
+  }
+
+  .dark-btn {
+    width: 45%;
+  }
+  .light-btn {
+    width: 60%;
+  }
+  .login-container {
+    width: 95%;
+    height: 80vh;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  p {
+    text-align: center;
+    width: 90%;
+    font-size: 0.9rem;
+  }
+  input {
+    width: 90%;
+    padding: 6px;
+    margin: 8px 0px;
+  }
+  .password-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    margin: 0;
+  }
+  .pass-div {
+    width: 88%;
+    font-size: 0.9rem;
+  }
+  button {
+    padding: 6px;
+    font-size: 0.9rem;
+  }
+  .dark-btn {
+    width: 35%;
+  }
+  .right-side .right-side-item h1 {
+    font-size: 2rem;
+  }
+  .right-side .right-side-item p {
+    padding: 0rem 1rem;
+  }
+  .light-btn {
+    width: 60%;
+  }
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="tel"] {
+    font-size: 0.9rem;
+  }
+
+  /* .login-body{
+      
+    background-color: #eee;
+    background: linear-gradient(180deg, #eee 0%, #e8b10e 100%);
+  } */
+}
+
+/* laptop */
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+  .team-section {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 1rem;
+  }
+  .team-section .card {
+    width: 100%;
+    height: 19rem;
+  }
+  .team-section .card:hover {
+    height: 22rem;
+  }
+
+  .food-menu {
+    width: 90%;
+  }
+
+  .food-menu .tabs-box .tab-btn {
+    font-size: 1rem;
+  }
+  .food-menu .line {
+    left: 1.8rem;
+  }
+
+  .food-item img {
+    width: 75px;
+    height: 75px;
+  }
+  .food-details h1 {
+    font-size: 1rem;
+  }
+  .food-details p {
+    font-size: 0.8rem;
+  }
+  .food-price {
+    font-size: 1rem;
+  }
+  .light-btn {
+    width: 60%;
+  }
+  .login-container{
+    width: 90%;
+    height: 80vh; 
+  }
+  .form .form-body{
+    height: 27rem;
+  }
+  .time-card .selection-item{
+    height: 1.5rem;
+
+  }
+}
+/* other screen */
+@media screen and (min-width: 1366px) {
+  .team-section {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 1rem;
+  }
+  .team-section .card {
+    width: 100%;
+    height: 23rem;
+  }
+  .team-section .card:hover {
+    height: 25rem;
+  }
+}
+/* ---------------------------------------------------------------------------- */
