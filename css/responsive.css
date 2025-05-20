@@ -9,7 +9,7 @@
   .nav-buttons {
     display: none;
   }
-  .mobile-header{
+  .mobile-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,22 +19,21 @@
     font-size: 1.4rem;
     padding-left: 0;
   }
-  #book-table{
+  #book-table {
     display: block;
     font-size: 1.3rem;
     color: rgba(255, 255, 255, 0.929);
   }
-  #login{
-
+  #login {
     display: block;
     font-size: 1.3rem;
     color: rgba(255, 255, 255, 0.929);
   }
-  #login a{
+  #login a {
     color: rgba(255, 255, 255, 0.929);
     text-decoration: none;
   }
-  .navbar-toggler-icon{
+  .navbar-toggler-icon {
     color: aqua;
   }
   .about-paragraph {
@@ -232,6 +231,50 @@
   .slider-navigations button:hover {
     background: none;
   }
+
+  /* user panel */
+  .navbar-head > .logo {
+    font-size: 1.5rem;
+  }
+
+  .sidebar {
+    width: 25%;
+  }
+  .main {
+    width: 75%;
+  }
+  #nav-toggle:checked + .sidebar {
+    width: 5%;
+  }
+  #nav-toggle:checked ~ .main {
+    width: 95%;
+  }
+
+  #nav-toggle:checked + .sidebar .sidebar-brand > .navbar-head > .logo,
+  #nav-toggle:checked
+    + .sidebar
+    .sidebar-menu
+    > .navbar-body
+    > li.nav-item
+    > a
+    > span {
+    padding-right: 0rem;
+  }
+  /* ------------------- */
+
+  .main-content {
+    padding: 1.2rem;
+  }
+  #active-reserv-card {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #active-reserv-card > .card > .card-footer > button {
+    padding: 0.3rem 1.8rem;
+  }
+  h4.time-icon > .fa-regular {
+    font-size: 1.8rem;
+  }
 }
 @media (max-width: 768px) {
   .slider-wrapper .slider-item .slide-content > * {
@@ -266,60 +309,11 @@
   }
 }
 
-/* SERVICES MEDIA RESPONSIVE */
-@media screen and (min-width: 350px) and (max-width: 600px) {
-  .services-card {
-    flex-direction: column;
-    align-items: center;
-  }
-  .services-card .card {
-    width: 82% !important;
-  }
-}
-@media screen and (min-width: 600px) and (max-width: 1024px) {
-  .services-card {
-    width: 100%;
-    display: grid;
-    grid-template-columns: auto auto;
-    float: left;
-  }
-  .services-card .card {
-    width: 100% !important;
-  }
-}
-@media screen and (min-width: 600px) and (max-width: 768px) {
-  .services-card {
-    gap: 10px 10px;
-  }
-  .services-card .card {
-    height: 12.5rem;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .services-card {
-    gap: 8px 10px;
-  }
-}
-
-@media screen and (min-width: 1024px) and (max-width: 1400px) {
-  .services-card {
-    width: 100%;
-    display: grid;
-    gap: 8px 10px;
-    grid-template-columns: auto auto auto auto;
-    float: left;
-  }
-  .services-card .card {
-    width: 100% !important;
-  }
-}
-
 /* ----------------------------------------------------- */
 /* DEFAULT SIZES RESPONSIVE */
 /* the smaller device */
-@media screen and (min-width:320px) and (max-width:360px){
-  .login-container{
+@media screen and (min-width: 320px) and (max-width: 360px) {
+  .login-container {
     height: 68vh;
   }
 }
@@ -387,14 +381,14 @@
   }
   dialog {
     width: 90%;
-    padding:0em;
+    padding: 0em;
   }
 
   dialog .form {
     width: 80%;
     max-width: 18rem;
   }
-  .form .form-body{
+  .form .form-body {
     height: 27rem;
   }
   .form .form-body .pagination .number {
@@ -407,22 +401,26 @@
     width: 28px;
     height: 2px;
   }
-  .form .steps .step{
-    width: 85vw;
-    max-width: 20rem;
+  .form .steps {
+    width: 390%;
+  }
+  .form .steps .step {
+    width: 70vw;
+    max-width: 32rem;
     padding: 0px;
+
     overflow: hidden;
   }
   .form .steps .step .grid {
     grid-template-columns: 1fr;
     gap: 0rem;
   }
-  .form .steps .step p{
+  .form .steps .step p {
     text-align: justify;
     width: 100%;
     font-size: 0.8rem;
   }
-  .form .steps .step h4{
+  .form .steps .step h4 {
     font-size: 1.1rem;
   }
   .form .form-footer button {
@@ -438,10 +436,10 @@
     /* padding: 2rem; */
     background-color: #fff;
   }
-  .reserv-card .selection-item{
+  .reserv-card .selection-item {
     height: 2.5rem;
   }
-  .time-card .selection-item{
+  .time-card .selection-item {
     height: 1.4rem;
     padding: 0.2rem;
   }
@@ -457,15 +455,15 @@
   .answer p {
     font-size: 0.9rem;
   }
-  dialog .close-btn{
+  dialog .close-btn {
     padding: 1rem 1rem 0 0 !important;
   }
   /* -------------------------------------------------LOGIN.CSS RESPONSIVE-------------------------------- */
-  .icon-contianer{
+  .icon-contianer {
     height: 10%;
     left: 2rem;
   }
-  .back-arrow>a{
+  .back-arrow > a {
     font-size: 1.2rem;
   }
   h1 {
@@ -504,8 +502,6 @@
     height: 0.7rem;
   }
 
-  
-
   input[type="text"],
   input[type="password"],
   input[type="email"],
@@ -526,26 +522,182 @@
   .admin-sign-in-form {
     /* background: transparent;
      */
-     background-color: transparent !important;
+    background-color: transparent !important;
   }
 
   .top-btn-text {
     display: block;
   }
-  .login-body{
-
+  .login-body {
     background-color: #eee;
     background: linear-gradient(180deg, #eee 0%, #e8b10e 100%);
-
   }
-  .top-btn-text{
+  .top-btn-text {
     display: block;
-    font-size: .7rem;
+    font-size: 0.7rem;
     color: #fff;
     font-weight: 400;
-
   }
-  
+  .desktop-nav {
+    width: 0%;
+    height: 0vh;
+    display: none;
+  }
+
+  .header {
+    display: block;
+  }
+  /* -------------------------------------------------BANNER RESPONSIVE-------------------------------- */
+  .banner {
+    height: 15rem;
+    padding-top: 2rem;
+  }
+  #banner-title {
+    font-size: 1.3rem;
+  }
+  #banner-p {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+  /* -------------------------------------------------SERVICES RESPONSIVE-------------------------------- */
+  .service-intro {
+    margin: 2rem 0rem 0rem 0rem !important;
+  }
+
+  .service-container {
+    grid-template-columns: 100% !important;
+  }
+
+  .service-box {
+    padding: 0rem 0.5rem !important;
+  }
+  .service-box h2 {
+    font-size: 1.1rem;
+    text-align: justify;
+  }
+
+  .service-box p {
+    width: 100%;
+    line-height: 1.5 !important;
+    text-align: justify;
+  }
+
+  .services-card {
+    grid-template-columns: auto;
+    gap: 0rem;
+    margin: 1rem 0rem !important;
+  }
+  .services-card .card {
+    float: none;
+  }
+
+  .services-card .card .card-icon span {
+    font-size: 2.5rem;
+  }
+  /* -------------------------------------------------CONTACT US RESPONSIVE-------------------------------- */
+  .contact-content {
+    grid-template-columns: 100% !important;
+    gap: 0rem !important;
+    padding: 0rem !important;
+    margin: 0rem !important;
+  }
+  .left-section {
+    border-right: none !important;
+    padding: 1rem !important;
+  }
+  .left-section > div {
+    padding: 1.5rem !important;
+    margin-bottom: 1rem !important;
+  }
+  .left-section > div > div.icon {
+    font-size: 1.4rem !important;
+  }
+
+  .left-section > div > div.left-content {
+    color: #fff;
+    font-size: 0.9rem;
+  }
+  .right-section {
+    width: 100% !important;
+    padding: 0rem !important;
+  }
+  .right-section h4 {
+    font-size: 1.2rem;
+  }
+  .right-section p {
+    width: 100%;
+    text-align: justify;
+  }
+
+  .right-section form > textarea {
+    margin: 0 !important;
+  }
+  .send-btn {
+    width: 100% !important;
+    margin: 1rem 0rem !important;
+    font-size: 0.9rem;
+  }
+  .map {
+    margin-bottom: 1rem !important;
+  }
+  /* -------------------------------------------------ADMIN DASHBOARD US RESPONSIVE-------------------------------- */
+  .cards {
+    grid-template-columns: 1fr !important;
+  }
+  .cards > .card {
+    gap: 1rem;
+  }
+  .statics {
+    grid-template-columns: 1fr !important;
+  }
+  #chart {
+    padding: 0rem !important;
+    margin: 0px !important;
+  }
+  .right-section {
+    padding: 2rem !important;
+  }
+  .reservation-manage {
+    margin: 2rem 1rem !important;
+  }
+  .manage-sec-head {
+    display: block !important;
+  }
+  #reservationsTable td {
+    border: 1px solid #b3b2b2 !important;
+  }
+
+  #reservationsTable tr {
+    border-bottom: 2px solid #000;
+  }
+
+  #searchInput {
+    width: 100% !important;
+  }
+
+  #reservationsTable > tbody > tr > td:nth-of-type(1)::before {
+    content: " Date ";
+  }
+  #reservationsTable > tbody > tr > td:nth-of-type(2)::before {
+    content: "Time";
+  }
+  #reservationsTable > tbody > tr > td:nth-of-type(3)::before {
+    content: "Name";
+  }
+  #reservationsTable > tbody > tr > td:nth-of-type(4)::before {
+    content: "Number Of People";
+  }
+  #reservationsTable > tbody > tr > td:nth-of-type(5)::before {
+    content: "Note";
+  }
+  #reservationsTable > tbody > tr > td:nth-of-type(6)::before {
+    content: "Status";
+    color: #000;
+  }
+
+  .change-password {
+    margin: 1rem 1rem !important;
+  }
 }
 
 /* mobile */
@@ -620,12 +772,10 @@
   .top-btn-text {
     display: block;
   }
-  .login-body{
-      
+  .login-body {
     background-color: #eee;
     background: linear-gradient(180deg, #eee 0%, #e8b10e 100%);
   }
-
 }
 /* Ipad */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -673,10 +823,10 @@
   .food-price {
     font-size: 0.9rem;
   }
-  .form .form-body{
-     height: 25rem;
+  .form .form-body {
+    height: 25rem;
   }
-  .time-card .selection-item{
+  .time-card .selection-item {
     height: 1.5rem;
     padding: 0.2rem;
   }
@@ -737,12 +887,6 @@
   input[type="tel"] {
     font-size: 0.9rem;
   }
-
-  /* .login-body{
-      
-    background-color: #eee;
-    background: linear-gradient(180deg, #eee 0%, #e8b10e 100%);
-  } */
 }
 
 /* laptop */
@@ -787,16 +931,15 @@
   .light-btn {
     width: 60%;
   }
-  .login-container{
+  .login-container {
     width: 90%;
-    height: 80vh; 
+    height: 80vh;
   }
-  .form .form-body{
+  .form .form-body {
     height: 27rem;
   }
-  .time-card .selection-item{
+  .time-card .selection-item {
     height: 1.5rem;
-
   }
 }
 /* other screen */
@@ -815,3 +958,273 @@
   }
 }
 /* ---------------------------------------------------------------------------- */
+
+@media (max-width: 991px) {
+  .desktop-nav {
+    display: none; /* Desktop nav gizle */
+  }
+
+  .header {
+    display: block; /* Mobile header göster */
+  }
+
+  .main {
+    margin-left: 0; /* main içerik tam genişlik */
+  }
+
+  /* user panel */
+  .navbar-head > .logo {
+    font-size: 1.3rem;
+  }
+  .navbar-head > .dash-text {
+    font-size: 1.1rem;
+  }
+  .sidebar {
+    width: 30%;
+  }
+  .main {
+    width: 70%;
+  }
+  #nav-toggle:checked + .sidebar {
+    width: 8%;
+  }
+  #nav-toggle:checked ~ .main {
+    width: 92%;
+  }
+
+  #nav-toggle:checked + .sidebar .sidebar-brand > .navbar-head > .logo,
+  #nav-toggle:checked
+    + .sidebar
+    .sidebar-menu
+    > .navbar-body
+    > li.nav-item
+    > a
+    > span {
+    padding-left: 0.4rem;
+  }
+  /* ------------------- */
+
+  .reserv-card-user.reserv-card {
+    background-color: transparent;
+  }
+  .main-body > .main-title > h1 {
+    font-size: 1.4rem;
+    color: #000;
+    margin: 0;
+    padding: 0;
+  }
+  .main-body > .main-title > h4 {
+    font-size: 0.8rem;
+    color: #807f7f;
+    margin: 0.4rem 0;
+    padding: 0;
+  }
+  .steps {
+    width: 90%;
+    grid-template-columns: 100%;
+    gap: 1.2rem;
+  }
+  .reserv-card-user.reserv-card .selection-item {
+    width: 95%;
+  }
+  .send-btn {
+    width: 85%;
+    margin: 2rem auto;
+  }
+  .main-content {
+    padding: 0.5rem;
+  }
+  #active-reserv-card {
+    width: 85%;
+    grid-template-columns: 1fr;
+  }
+  #active-reserv-card:nth-child(1) {
+    margin: 0rem auto;
+  }
+  #active-reserv-card > .card > .card-header > p {
+    margin: auto;
+    text-align: center;
+    font-size: 1rem;
+  }
+  #active-reserv-card > .card > .card-body > h4 {
+    font-size: 1rem;
+    padding: 0;
+  }
+  #active-reserv-card > .card > .card-footer {
+    border: none;
+  }
+  #active-reserv-card > .card > .card-footer > button {
+    padding: 0.3rem 3.5rem;
+  }
+  h4.time-icon > .fa-regular {
+    font-size: 1.9rem;
+  }
+
+  th {
+    display: none;
+  }
+  td {
+    display: grid;
+    grid-template-rows: 1fr auto;
+  }
+  td::before {
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+  td:first-child {
+    padding-top: 1.5rem;
+  }
+  td:last-child {
+    padding-top: 1.5rem;
+  }
+  td:nth-of-type(1)::before {
+    content: "Reservation Date & Time";
+  }
+  td:nth-of-type(2)::before {
+    content: "Number Of People";
+  }
+  td:nth-of-type(3)::before {
+    content: "Description";
+  }
+  th,
+  td {
+    padding: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* user panel */
+  .sidebar {
+    width: 0%;
+  }
+  .main {
+    width: 100%;
+  }
+  #nav-toggle:checked + .sidebar {
+    width: 85%;
+  }
+  #nav-toggle:checked ~ .main {
+    width: 15%;
+  }
+  #nav-toggle:checked + .sidebar .sidebar-brand > .navbar-head > .logo > span,
+  #nav-toggle:checked + .sidebar .sidebar-brand > .navbar-head > .dash-text,
+  #nav-toggle:checked
+    + .sidebar
+    .sidebar-menu
+    > .navbar-body
+    > li.nav-item
+    > a
+    > span,
+  #nav-toggle:checked
+    + .sidebar
+    .sidebar-menu
+    > .navbar-footer
+    > .nav-item
+    > a
+    > span {
+    display: inline;
+  }
+  #nav-toggle:checked + .sidebar .sidebar-brand > .navbar-head > .logo > img {
+    width: 2.2rem;
+    margin: 0rem 0.5rem 0rem 0rem;
+    display: block;
+  }
+
+  #nav-toggle:checked + .sidebar .sidebar-menu > .navbar-body > li.nav-item {
+    padding: 0rem;
+    height: 50px;
+    text-align: left;
+    line-height: 50px;
+    margin: 0rem;
+    border-radius: 0px;
+  }
+
+  .reserv-card-user.reserv-card {
+    background-color: transparent;
+  }
+  .main-body > .main-title > h1 {
+    font-size: 1.4rem;
+    color: #000;
+    margin: 0;
+    padding: 0;
+  }
+  .main-body > .main-title > h4 {
+    font-size: 0.8rem;
+    color: #807f7f;
+    margin: 0.4rem 0;
+    padding: 0;
+  }
+  .steps {
+    width: 90%;
+    grid-template-columns: 100%;
+    gap: 1.2rem;
+  }
+  .reserv-card-user.reserv-card .selection-item {
+    width: 95%;
+  }
+  .send-btn {
+    width: 85%;
+    margin: 2rem auto;
+  }
+  .main-content {
+    padding: 0rem;
+  }
+  #active-reserv-card {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+  #active-reserv-card:nth-child(1) {
+    margin: 0rem auto;
+  }
+  #active-reserv-card > .card > .card-header > p {
+    margin: auto;
+    text-align: center;
+    font-size: 1rem;
+  }
+  #active-reserv-card > .card > .card-body > h4 {
+    font-size: 1rem;
+    padding: 0;
+  }
+  #active-reserv-card > .card > .card-footer {
+    border: none;
+  }
+  #active-reserv-card > .card > .card-footer > button {
+    padding: 0.3rem 3.5rem;
+  }
+  h4.time-icon > .fa-regular {
+    font-size: 1.9rem;
+  }
+  #past-reserv-section {
+    text-align: center;
+  }
+  #past-reserv-section > table > tr > th {
+    display: none;
+  }
+  #past-reserv-section > table > tr > td {
+    display: grid;
+    grid-template-rows: 1fr auto;
+  }
+  #past-reserv-section > table > tr > td::before {
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+  #past-reserv-section > table > tr > td:first-child {
+    padding-top: 1.5rem;
+  }
+  #past-reserv-section > table > tr > td:last-child {
+    padding-top: 0.5rem;
+  }
+  #past-reserv-section > table > tr > td:nth-of-type(1)::before {
+    content: "Reservation Date & Time";
+  }
+  #past-reserv-section > table > tr > td:nth-of-type(2)::before {
+    content: "Number Of People";
+  }
+  #past-reserv-section > table > tr > td:nth-of-type(3)::before {
+    content: "Description";
+  }
+  th,
+  td {
+    padding: 0.5rem;
+  }
+}

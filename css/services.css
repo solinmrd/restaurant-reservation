@@ -1,0 +1,41 @@
+.service-intro {
+  margin: 3.5rem 0rem 0rem 0rem;
+}
+
+.service-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+.service-image {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+.service-image img {
+  width: 100%;
+}
+
+.service-box {
+  width: 100%;
+padding: 0rem 2rem;
+}
+.service-box h2{
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.service-box h2>span{
+  color: #e8b10e;
+}
+
+.service-box p {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+
