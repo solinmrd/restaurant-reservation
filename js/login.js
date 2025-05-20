@@ -75,8 +75,12 @@ adminSignBtn.addEventListener("click", () => {
     })
     .then(() => {
       alert("Login successful! 🎉");
-      // Burada istersen başka bir sayfaya yönlendirme yapabilirsin
-      window.location.href = "admin-dashboard.html"; // Başarılıysa dashboard'a gider
+
+      // ADMİN BİLGİLERİ LOCALSTORAGE'A KAYDET
+      localStorage.setItem("name", name);
+      localStorage.setItem("password", password);
+      // Başarılıysa dashboard'a gider
+      window.location.href = "admin-dashboard.html";
     })
     .catch((err) => {
       alert("Incorrect username or password ❌");
@@ -99,15 +103,7 @@ function showPassword() {
 // ---------------------------------------------------------USER GİRİŞ İŞLEMLERİ--------------------------------------------------
 // DOM tamamen yüklendiğinde bu kod çalışır
 document.addEventListener("DOMContentLoaded", () => {
-  // BAKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK!!!!!!!!!!!!!!!!!!!!!!
-  // // Login butonunu seçiyoruz
-  // const loginButton = document.querySelector(".nav-buttons .btn-yellow-border");
 
-  // // Popup dialog ve kapatma butonunu seçiyoruz
-  // const popup = document.getElementById("reservationPopup");
-  // const closeBtn = document.querySelector(".close-popup");
-
-  // Login butonuna tıklanınca kullanıcıdan bilgi al ve rezervasyonları getir
   const loginButton = document.getElementById("user-sign-btn");
   loginButton.addEventListener("click", () => {
     const name = document.getElementById("name").value.trim();
@@ -142,8 +138,14 @@ document.addEventListener("DOMContentLoaded", () => {
       })
       .then((reservations) => {
         alert("Login successful! 🎉");
-        window.location.href = "user-panel.html"; // Başarılıysa kullanıcı paneline yönlendir
-      
+        console.log("Login successful, now saving user name...");
+        // KULLANICININ KİMLİĞİNİ TANITAN BİLGİLERİ LOCALSTORAGE'A KAYDET
+        localStorage.setItem("userName", name);
+        localStorage.setItem("userEmail", email);
+        localStorage.setItem("userPhone", phone);
+        // console.log("Saved userName:", localStorage.getItem('userName'));
+
+        window.location.href = "user-dashboard.html"; // Başarılıysa kullanıcı paneline yönlendir
       })
       .catch((err) => {
         alert("An error occurred: " + err.message);

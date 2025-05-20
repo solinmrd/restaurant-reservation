@@ -350,50 +350,9 @@ createForm();
         .then((data) => {
           console.log("API Response:", data); //  response
 
-          // Başarılı rezervasyon mesajı için popup oluşturma.
-          const successDiv = document.createElement("div");
-          successDiv.className = "popup center active";
-
-          const iconDiv = document.createElement("div");
-          iconDiv.className = "state-popup-icon success-icon";
-          const successIcon = document.createElement("i");
-          successIcon.className = "fa fa-check";
-
-          const succcessTitle = document.createElement("div");
-          succcessTitle.className = "state-title success-title";
-          succcessTitle.innerHTML = "Reservation Completed Successfully!";
-
-          const successDescription = document.createElement("div");
-          successDescription.className =
-            "state-description success-description";
-          successDescription.innerHTML =
-            "Your reservation has been successfully created. We will contact you soon.";
-
-          const okDiv = document.createElement("div");
-          okDiv.className = "ok-btn";
-          const okButton = document.createElement("button");
-          okButton.className = "ok-popup-btn";
-          okButton.innerHTML = "Close";
-
-          successDiv.appendChild(iconDiv);
-          successDiv.appendChild(succcessTitle);
-          successDiv.appendChild(successDescription);
-          successDiv.appendChild(okDiv);
-          iconDiv.appendChild(successIcon);
-          okDiv.appendChild(okButton);
-
-          document.body.appendChild(successDiv);
-
-          overflowHidden();
-
-          // ✅ OK butonuna basıldığında popup ve overlay'i kaldır
-          okButton.addEventListener("click", () => {
-            document.body.removeChild(successDiv);
-            overflowAuto();
-          });
+          successPopup();
 
           dialog.close();
-          
 
           // Form görünürlüğünü kapat (Eğer .form dışarıda görünür kaldıysa)
           const formContainer = document.querySelector(".form");
@@ -422,45 +381,7 @@ createForm();
         // Başarısız rezervasyon
         .catch((err) => {
           console.error(err);
-          //  Başarısız rezervasyon mesajı için popup oluşturma.
-          const errDiv = document.createElement("div");
-          errDiv.className = "popup center active";
-
-          const iconDiv = document.createElement("div");
-          iconDiv.className = "state-popup-icon err-icon";
-          const errIcon = document.createElement("i");
-          errIcon.className = "fa  fa-times-circle";
-
-          const errTitle = document.createElement("div");
-          errTitle.className = "state-title err-title";
-          errTitle.innerHTML = "Reservation Failed!";
-
-          const errDescription = document.createElement("div");
-          errDescription.className = "state-description err-description";
-          errDescription.innerHTML =
-            "We're sorry! Your reservation has not been created.";
-
-          const okDiv = document.createElement("div");
-          okDiv.className = "ok-btn";
-          const okButton = document.createElement("button");
-          okButton.className = "ok-popup-btn";
-          okButton.innerHTML = "Close";
-
-          errDiv.appendChild(iconDiv);
-          errDiv.appendChild(errTitle);
-          errDiv.appendChild(errDescription);
-          errDiv.appendChild(okDiv);
-          iconDiv.appendChild(errIcon);
-          okDiv.appendChild(okButton);
-
-          document.body.appendChild(errDiv);
-          overflowHidden();
-
-          // ✅ OK butonuna basıldığında popup ve overlay'i kaldır
-          okButton.addEventListener("click", () => {
-            document.body.removeChild(errDiv);
-            overflowAuto();
-          });
+          unsuccessPopup();
           dialog.close();
           function resetForm() {
             const formContainer = document.querySelector(".form");
@@ -479,22 +400,7 @@ createForm();
           }
           resetForm();
 
-
-          // document.body.style.overflow = "auto";
-          // document.querySelector("dialog").style.display = "none";
-
-          // // ✅ Tüm inputları temizle
-          // document.getElementById("name").value = "";
-          // document.getElementById("email").value = "";
-          // document.getElementById("phone").value = "";
-          // document.getElementById("message").value = "";
-
-          // // ✅ Seçili item'ları temizle
-          // document
-          //   .querySelectorAll(".selection-item.selected")
-          //   .forEach((el) => el.classList.remove("selected"));
-
-          // // ✅ Adımı başa al
+         
           createForm();
           currentPage = 1;
           movePage();
@@ -508,6 +414,90 @@ createForm();
   createForm();
   movePage();
 })();
+
+function successPopup() {
+  // Başarılı rezervasyon mesajı için popup oluşturma.
+  const successDiv = document.createElement("div");
+  successDiv.className = "popup center active";
+
+  const iconDiv = document.createElement("div");
+  iconDiv.className = "state-popup-icon success-icon";
+  const successIcon = document.createElement("i");
+  successIcon.className = "fa fa-check";
+
+  const succcessTitle = document.createElement("div");
+  succcessTitle.className = "state-title success-title";
+  succcessTitle.innerHTML = "Reservation Completed Successfully!";
+
+  const successDescription = document.createElement("div");
+  successDescription.className = "state-description success-description";
+  successDescription.innerHTML =
+    "Your reservation has been successfully created. We will contact you soon.";
+
+  const okDiv = document.createElement("div");
+  okDiv.className = "ok-btn";
+  const okButton = document.createElement("button");
+  okButton.className = "ok-popup-btn";
+  okButton.innerHTML = "Close";
+
+  successDiv.appendChild(iconDiv);
+  successDiv.appendChild(succcessTitle);
+  successDiv.appendChild(successDescription);
+  successDiv.appendChild(okDiv);
+  iconDiv.appendChild(successIcon);
+  okDiv.appendChild(okButton);
+
+  document.body.appendChild(successDiv);
+
+  overflowHidden();
+
+  // ✅ OK butonuna basıldığında popup ve overlay'i kaldır
+  okButton.addEventListener("click", () => {
+    document.body.removeChild(successDiv);
+    overflowAuto();
+  });
+}
+function unsuccessPopup() {
+  //  Başarısız rezervasyon mesajı için popup oluşturma.
+  const errDiv = document.createElement("div");
+  errDiv.className = "popup center active";
+
+  const iconDiv = document.createElement("div");
+  iconDiv.className = "state-popup-icon err-icon";
+  const errIcon = document.createElement("i");
+  errIcon.className = "fa  fa-times-circle";
+
+  const errTitle = document.createElement("div");
+  errTitle.className = "state-title err-title";
+  errTitle.innerHTML = "Reservation Failed!";
+
+  const errDescription = document.createElement("div");
+  errDescription.className = "state-description err-description";
+  errDescription.innerHTML =
+    "We're sorry! Your reservation has not been created.";
+
+  const okDiv = document.createElement("div");
+  okDiv.className = "ok-btn";
+  const okButton = document.createElement("button");
+  okButton.className = "ok-popup-btn";
+  okButton.innerHTML = "Close";
+
+  errDiv.appendChild(iconDiv);
+  errDiv.appendChild(errTitle);
+  errDiv.appendChild(errDescription);
+  errDiv.appendChild(okDiv);
+  iconDiv.appendChild(errIcon);
+  okDiv.appendChild(okButton);
+
+  document.body.appendChild(errDiv);
+  overflowHidden();
+
+  // ✅ OK butonuna basıldığında popup ve overlay'i kaldır
+  okButton.addEventListener("click", () => {
+    document.body.removeChild(errDiv);
+    overflowAuto();
+  });
+}
 
 function overflowAuto() {
   // Popup kapatıldığında arka plana scroll olabilmesi için
