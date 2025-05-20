@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- IMPORT BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- IMPORT CSS FILES -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/user-panel.css" />
+    <!-- <link rel="stylesheet" href="css/reservation.css" /> -->
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/admin-panel.css" />
+
+    <!-- IMPORT CDNJS HREF -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <!-- FAVICON -->
+    <link
+      rel="icon"
+      href="images/icons/restaurant-yellow-icon.png"
+      type="image/x-icon"
+    />
+
+    <title>Restaurant - Admin Dashboard</title>
+  </head>
+  <body>
+    <div
+      class="container-fluid"
+      style="margin: 0; padding: 0"
+      id="panel-design"
+    >
+      <!-- NAVBAR STARTS HERE -->
+      <input type="checkbox" name="" id="nav-toggle" />
+      <div class="sidebar">
+        <div class="sidebar-brand">
+          <ul class="navbar-head">
+            <li class="logo">
+              <img
+                src="images/icons/restaurant-yellow-icon.png"
+                alt="Restaurant"
+              /><span>Restaurant</span>
+            </li>
+            <li class="dash-text"><span></span>Admin Dashboard</li>
+          </ul>
+        </div>
+
+        <div class="sidebar-menu">
+          <ul class="navbar-body">
+            <li class="nav-item active" data-target="dashboard">
+              <a href="javascript:void(0)"
+                ><i class="fa-solid fa-gauge"></i> <span>Dashboard</span></a
+              >
+            </li>
+            <li class="nav-item" data-target="manage-all-reservations">
+              <a href="javascript:void(0)"
+                ><i class="fa-solid fa-list-check"></i>
+                <span>manage all reservations</span></a
+              >
+            </li>
+            <li class="nav-item" data-target="settings">
+              <a href="javascript:void(0)"
+                ><i class="fa-solid fa-gear"></i> <span>Settings</span></a
+              >
+            </li>
+          </ul>
+
+          <ul class="navbar-footer">
+            <li class="nav-item">
+              <a href="javascript:void(0)" class="logout"
+                ><i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Logout</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- NAVBAR END HERE -->
+
+      <section class="main" id="dashboard">
+        <div class="main-top">
+          <label class="toggle-icon" id="toggle-icon" for="nav-toggle">
+            <i class="bi bi-list"></i>
+          </label>
+          <h3 class="welcome-text"></h3>
+        </div>
+        <div class="main-body">
+          <div class="cards">
+            <div class="card">
+              <div class="card-content">
+                <div class="number">+<span class="counter">300</span></div>
+                <div class="card-name">Customer</div>
+              </div>
+              <div class="icon-box">
+                <i class="fa-solid fa-users"></i>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-content">
+                <div class="number">+<span class="counter">500</span></div>
+                <div class="card-name">Reservastion</div>
+              </div>
+              <div class="icon-box">
+                <i class="fa-solid fa-clock"></i>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-content">
+                <div class="number">+<span class="counter">100</span></div>
+                <div class="card-name">Today's Reservations</div>
+              </div>
+              <div class="icon-box">
+                <i class="fa-solid fa-calendar-check"></i>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-content">
+                <div class="number">+<span class="counter">50</span></div>
+                <div class="card-name">reservations made today</div>
+              </div>
+              <div class="icon-box">
+                <i class="fa-solid fa-calendar-plus"></i>
+              </div>
+            </div>
+          </div>
+          <div class="row statics">
+            <div class="left-section">
+              <div id="chart"></div>
+            </div>
+            <div class="right-section">
+              <h4>This Week</h4>
+              <p id="total-reservations"></p>
+              <p id="busiest-day"></p>
+
+              <h4>Last 5 Reservations</h4>
+              <table id="recent-reservations-table">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Number Of People</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main hidden" id="manage-all-reservations">
+        <div class="main-top">
+          <label class="toggle-icon" id="toggle-icon" for="nav-toggle">
+            <i class="bi bi-list"></i>
+          </label>
+          <h3 class="welcome-text"></h3>
+        </div>
+        <div class="main-body">
+          <div class="main-title">
+            <h1>Manage All Reservations</h1>
+            <h4>You can view all reservations for your restaurant.</h4>
+          </div>
+          <div class="main-content">
+            <div class="reservation-manage">
+              <div class="manage-sec-head">
+                <div class="filter-buttons">
+                  <button id="allReservationsBtn">All Reservations</button>
+                  <button id="todayReservationsBtn">
+                    today's reservations
+                  </button>
+                </div>
+
+                <input
+                  type="text"
+                  id="searchInput"
+                  placeholder="Search by customer name..."
+                />
+              </div>
+
+              <table id="reservationsTable">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Name</th>
+                    <th>Number of people</th>
+                    <th>Note</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Satırlar burada oluşturulacak -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main hidden" id="settings">
+        <div class="main-top">
+          <label class="toggle-icon" id="toggle-icon" for="nav-toggle">
+            <i class="bi bi-list"></i>
+          </label>
+          <h3 class="welcome-text"></h3>
+        </div>
+        <div class="main-body">
+          <div class="main-title">
+            <h1>Account settings</h1>
+            <h4>
+              You can make settings for your account and change your password.
+            </h4>
+          </div>
+          <div class="main-content">
+            <div class="change-password">
+              <form id="passwordForm" class="password-form">
+                <div class="mb-3">
+                  <label for="adminName" class="form-label">Admin Name</label>
+                  <input
+                    type="text"
+                    id="adminName"
+                    class="form-control"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="currentPassword" class="form-label"
+                    >Current Password</label
+                  >
+                  <input
+                    type="password"
+                    id="currentPassword"
+                    class="form-control"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="newPassword" class="form-label"
+                    >New Password</label
+                  >
+                  <input
+                    type="password"
+                    id="newPassword"
+                    class="form-control"
+                    required
+                  />
+                </div>
+                <button type="submit" class="btn update-btn">
+                  Update Password
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- IMPORT BOOTSTRAP JS -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- IMPORT APEXCHART -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <!-- LINKING SWIPER JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/slider.js"></script>
+
+    <!-- IMPORT ADMIN LOGIN JS -->
+    <script src="js/admin-dashboard.js"></script>
+
+    <!-- LINKING COUNTER JS -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script>
+      $(".counter").counterUp({
+        delay: 10,
+        time: 3000,
+      });
+    </script>
+  </body>
+</html>

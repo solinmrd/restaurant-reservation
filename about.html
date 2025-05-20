@@ -33,7 +33,14 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
-    <title>Restaurant Reservation</title>
+
+    <!-- FAVICON -->
+    <link
+      rel="icon"
+      href="images/icons/restaurant-yellow-icon.png"
+      type="image/x-icon"
+    />
+    <title>Restaurant Reservation - About</title>
   </head>
   <body>
     <!-- ---------------------------HEADER START HERE--------------------------- -->
@@ -47,30 +54,39 @@
           <ul class="navbar-nav">
             <li class="menu-item"><a href="index.html">Home</a></li>
             <li class="menu-item"><a href="about.html">About</a></li>
-            <li class="menu-item"><a href="#service">Service</a></li>
-            <li class="menu-item"><a href="#menu">Menu</a></li>
-            <li class="menu-item"><a href="#contact">Contact</a></li>
+            <li class="menu-item"><a href="service.html">Service</a></li>
+            <li class="menu-item"><a href="menu.html">Menu</a></li>
+            <li class="menu-item"><a href="contact.html">Contact Us</a></li>
           </ul>
         </div>
 
-        <!-- mobile menu icon -->
         <div class="nav-buttons">
-          <button class="btn btn-yellow" id="rezerv-popup" type="submit">
+          <button class="btn btn-yellow rezerv-popup" type="submit">
             Book a table
           </button>
-          <button class="btn btn-yellow-border" type="submit">login</button>
+          <button class="btn btn-yellow-border" type="submit" id="admin-login">
+            <a href="login.html"> login</a>
+          </button>
         </div>
-
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasDarkNavbar"
-          aria-controls="offcanvasDarkNavbar"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <!-- mobile menu icon -->
+        <div class="mobile-header">
+          <div class="rezerv-popup" id="book-table">
+            <i class="fa-solid fa-calendar"></i>
+          </div>
+          <div class="login" id="login">
+            <a href="login.html"> <i class="fa-solid fa-user"></i></a>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasDarkNavbar"
+            aria-controls="offcanvasDarkNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
 
         <!-- mobile menu -->
         <div
@@ -103,13 +119,13 @@
                 <a class="nav-link" href="about.html">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#service">Service</a>
+                <a class="nav-link" href="service.html">Service</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#menu">Menu</a>
+                <a class="nav-link" href="menu.html">Menu</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact</a>
+                <a class="nav-link" href="contact.html">Contact Us</a>
               </li>
             </ul>
 
@@ -383,15 +399,6 @@
           <i class="fa-solid fa-xmark"></i>
         </div>
         <div class="form">
-          <!--   
-          <div class="form-header">
-            <h2>Book a Table</h2>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni,
-              veniam obcaecati? Iste fugit recusandae quisquam perspiciatis
-              eligendi. Perferendis, ipsam doloribus.
-            </p>
-          </div> -->
           <div class="form-body">
             <div class="pagination">
               <div class="number active">1</div>
@@ -468,11 +475,7 @@
                   Lorem, ipsum dolor.
                 </p>
 
-                <div class="reserv-time-selection reserv-card">
-                  <!-- <div class="time-selection-item">
-                    <h3 class="time-selection-label"></h3>
-                  </div> -->
-                </div>
+                <div class="reserv-time-selection reserv-card"></div>
               </div>
             </div>
           </div>
@@ -513,13 +516,13 @@
               <a href="about.html"><span></span>About</a>
             </li>
             <li>
-              <a href="#service"><span></span>Service</a>
+              <a href="service.html"><span></span>Service</a>
             </li>
             <li>
-              <a href="#menu"><span></span>menu</a>
+              <a href="menu.html"><span></span>menu</a>
             </li>
             <li>
-              <a href="contact"><span></span>contact</a>
+              <a href="contact.html"><span></span>contact Us</a>
             </li>
           </ul>
         </div>
@@ -577,19 +580,6 @@
 
     <!-- IMPORT BOOTSTRAP JS -->
     <script src="js/bootstrap.min.js"></script>
-
-    <!-- 
-
-    LINKING COUNTER JS
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
-    <script>
-      $(".counter").counterUp({
-        delay: 10,
-        time: 3000,
-      });
-    </script> -->
 
     <!-- IMPORT RESERVATION JS -->
     <script src="js/reservation.js"></script>
