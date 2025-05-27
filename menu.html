@@ -12,7 +12,8 @@
     <!-- IMPORT CSS FILES -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
-    <link rel="stylesheet" href="css/services.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+    <link rel="stylesheet" href="css/reservation.css" />
 
     <!-- IMPORT GOOGLE ICONS -->
     <link
@@ -144,7 +145,6 @@
       </div>
     </nav>
     <!-- ---------------------------HEADER END HERE--------------------------- -->
-
     <!-- ---------------------------BANNER START HERE--------------------------- -->
 
     <div class="banner">
@@ -162,315 +162,246 @@
     <section class="container section">
       <!-- ---------------------------MENU START HERE--------------------------- -->
 
-      <div class="row my-3 food-menu">
-        <div class="tabs-box">
-          <button class="tab-btn active">main dishes</button>
-          <button class="tab-btn">fast food</button>
-          <button class="tab-btn">Soups</button>
-          <button class="tab-btn">Salads</button>
-          <button class="tab-btn">appetizers</button>
-          <button class="tab-btn">sweets</button>
-          <div class="line"></div>
+      <div class="row">
+        <!-- Sidebar Categories -->
+        <div class="col-md-2 category-sidebar">
+          <h5>Categories</h5>
+          <ul class="nav flex-column" id="categoryList">
+            <li class="nav-item">
+              <a class="nav-link active" href="#" data-category="all">All</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-category="main">Main Dishes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-category="fast">Fast Food</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-category="soup">Soups</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-category="salad">Salads</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-category="appetizer"
+                >Appetizers</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-category="sweet">Sweets</a>
+            </li>
+          </ul>
         </div>
 
-        <div class="content-box">
-          <!-- main dishes -->
-          <div class="content food-section active">
-            <h2>
-              main dishes
-              <hr />
-            </h2>
-            <div class="food-item">
-              <div class="food-image">
-                <img src="images/menu/izgara-karisik.jpg" alt="Mixed Grill" />
-              </div>
-              <div class="food-details">
-                <h1>mixed grill</h1>
-                <p>
-                  Chops, beef steak, meatballs, lamb shish, tenderloin, urfa and
-                  adana kebab
-                </p>
-              </div>
-              <div class="food-price">$150</div>
+        <!-- Main Content -->
+        <div class="col-md-10">
+          <!-- Search & Filters -->
+          <div class="row mt-3 mb-3">
+            <div class="col-md-6">
+              <input
+                type="text"
+                class="form-control"
+                id="searchInput"
+                placeholder="Search for a dish..."
+              />
             </div>
-
-            <div class="food-item">
-              <div class="food-image">
-                <img src="images/menu/lahmacun.jpg" alt="Lahmacun" />
-              </div>
-              <div class="food-details">
-                <h1>lahmacun</h1>
-                <p>
-                  lahmacun, Cheese Lahmacun, Garlic Lahmacun and Hazelnut
-                  Lahmacun
-                </p>
-              </div>
-              <div class="food-price">$35</div>
+            <div class="col-md-3">
+              <select class="form-select" id="typeFilter">
+                <option value="all">Filter by Type</option>
+                <option value="vegan">Vegan</option>
+                <option value="gluten">Gluten-Free</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <select class="form-select" id="priceSort">
+                <option value="default">Sort by Price</option>
+                <option value="asc">Low to High</option>
+                <option value="desc">High to Low</option>
+              </select>
             </div>
           </div>
 
-          <!-- fast food -->
-          <div class="content food-section">
-            <h2>
-              Fast Food
-              <hr />
-            </h2>
-
-            <div class="food-item">
-              <div class="food-image">
-                <img src="images/menu/burger.jpg" alt="Meat Burger" />
-              </div>
-              <div class="food-details">
-                <h1>Meat Burger</h1>
-                <p>
-                  Beef, Louisiana Sauce, Greens, Pickles, Caramelized Onion,
-                  Jalapeno Pepper, Roasted Pepper and Cheddar Cheese
-                </p>
-              </div>
-              <div class="food-price">$45</div>
-            </div>
-
-            <div class="food-item">
-              <div class="food-image">
-                <img src="images/menu/tavuk-burger.jpg" alt="Chicken Burger" />
-              </div>
-              <div class="food-details">
-                <h1>Chicken Burger</h1>
-                <p>Chicken Meat, Mayonnaise, Pickles and Greens</p>
-              </div>
-              <div class="food-price">$38</div>
-            </div>
-          </div>
-
-          <!-- Soups -->
-          <div class="content food-section">
-            <h2>
-              Soups
-              <hr />
-            </h2>
-
-            <div class="food-item">
-              <div class="food-image">
-                <img src="images/menu/mercimek-corbasi.jpg" alt="Lentil Soup" />
-              </div>
-              <div class="food-details">
-                <h1>Lentil Soup</h1>
-                <p>red lentils</p>
-              </div>
-              <div class="food-price">$8</div>
-            </div>
-
-            <div class="food-item">
-              <div class="food-image">
-                <img src="images/menu/domates-corbasi.jpg" alt="Tomato Soup" />
-              </div>
-              <div class="food-details">
-                <h1>Tomato Soup</h1>
-                <p>Tomato</p>
-              </div>
-              <div class="food-price">$10</div>
-            </div>
-
-            <div class="food-item">
-              <div class="food-image">
-                <img src="images/menu/mantar-corbasi.jpg" alt="Mushroom Soup" />
-              </div>
-              <div class="food-details">
-                <h1>Mushroom Soup</h1>
-                <p>Mushroom</p>
-              </div>
-              <div class="food-price">$12</div>
-            </div>
-
-            <div class="food-item">
-              <div class="food-image">
-                <img src="images/menu/sebze-corbasi.jpg" alt="Vegetable Soup" />
-              </div>
-              <div class="food-details">
-                <h1>Vegetable soup</h1>
-                <p>Potatoes, carrots, noodles, peas and onions</p>
-              </div>
-              <div class="food-price">$12</div>
-            </div>
-          </div>
-
-          <!-- Salads -->
-          <div class="content food-section">
-            <h2>
-              Salads
-              <hr />
-            </h2>
-
-            <div class="food-item">
-              <div class="food-image">
+          <!-- Menu Grid -->
+          <div class="row" id="menuContainer">
+            <!-- Sample food card -->
+            <div
+              class="col-md-4 mb-4 menu-item"
+              data-category="main"
+              data-type="gluten"
+              data-price="12.99"
+            >
+              <div class="card food-card">
                 <img
-                  src="images/menu/broccoli-salad.jpg"
-                  alt="Broccoli salad"
+                  src="https://via.placeholder.com/300x200"
+                  class="card-img-top"
+                  alt="Dish"
                 />
+                <div class="card-body">
+                  <h5 class="card-title">Grilled Chicken</h5>
+                  <p class="card-text">
+                    Juicy grilled chicken served with seasonal vegetables.
+                  </p>
+                  <p class="fw-bold">$12.99</p>
+                  <a href="details.html?id=1" class="btn gold-btn">Details</a>
+                </div>
               </div>
-              <div class="food-details">
-                <h1>Broccoli salad</h1>
-                <p>Broccoli, red pepper, green pepper, red cabbage</p>
-              </div>
-              <div class="food-price">$25</div>
             </div>
-
-            <div class="food-item">
-              <div class="food-image">
+            <div
+              class="col-md-4 mb-4 menu-item"
+              data-category="salad"
+              data-type="vegan"
+              data-price="9.50"
+            >
+              <div class="card food-card">
                 <img
-                  src="images/menu/vegetable-roka-salad.jpg"
-                  alt="Vegetable Roka Salad"
+                  src="https://via.placeholder.com/300x200"
+                  class="card-img-top"
+                  alt="Dish"
                 />
+                <div class="card-body">
+                  <h5 class="card-title">Vegan Salad</h5>
+                  <p class="card-text">
+                    Fresh greens with a tangy lemon dressing.
+                  </p>
+                  <p class="fw-bold">$9.50</p>
+                  <a href="details.html?id=2" class="btn gold-btn">Details</a>
+                </div>
               </div>
-              <div class="food-details">
-                <h1>Vegetable Roka Salad</h1>
-                <p>feta white cheese, green salad, tomatoes and olives.</p>
-              </div>
-              <div class="food-price">$22</div>
             </div>
-
-            <div class="food-item">
-              <div class="food-image">
-                <img src="images/menu/cabbage-salad.jpg" alt="Cabbage Salad" />
-              </div>
-              <div class="food-details">
-                <h1>cabbage salad</h1>
-                <p>Red cabbage, carrot, parsley, red and green peppers</p>
-              </div>
-              <div class="food-price">$15</div>
-            </div>
-
-            <div class="food-item">
-              <div class="food-image">
+            <div
+              class="col-md-4 mb-4 menu-item"
+              data-category="fast"
+              data-type="gluten"
+              data-price="6.99"
+            >
+              <div class="card food-card">
                 <img
-                  src="images/menu/choban-shepherd-salad.jpg"
-                  alt="Choban Shepherd Salad"
+                  src="https://via.placeholder.com/300x200"
+                  class="card-img-top"
+                  alt="Dish"
                 />
+                <div class="card-body">
+                  <h5 class="card-title">Cheeseburger</h5>
+                  <p class="card-text">
+                    Classic cheeseburger with fries on the side.
+                  </p>
+                  <p class="fw-bold">$6.99</p>
+                  <a href="details.html?id=3" class="btn gold-btn">Details</a>
+                </div>
               </div>
-              <div class="food-details">
-                <h1>Choban shepherd salad</h1>
-                <p>tomatoes, lettuce, cucumber and lemon</p>
-              </div>
-              <div class="food-price">$12</div>
             </div>
-          </div>
-
-          <!-- appetizers -->
-          <div class="content food-section">
-            <h2>
-              appetizers
-              <hr />
-            </h2>
-
-            <div class="food-item">
-              <div class="food-image">
-                <img src="images/menu/muhammara.jpg" alt="Muhammara" />
-              </div>
-              <div class="food-details">
-                <h1>Muhammara</h1>
-                <p></p>
-              </div>
-              <div class="food-price">$5</div>
-            </div>
-
-            <div class="food-item">
-              <div class="food-image">
-                <img src="images/menu/humus.jpg" alt="Hummus" />
-              </div>
-              <div class="food-details">
-                <h1>Hummus</h1>
-                <p>
-                  Pumpkin Hummus, Beetroot Hummus, Ginger Hummus, Basil Hummus
-                  and Hummus with roasted eggplant
-                </p>
-              </div>
-              <div class="food-price">$10</div>
-            </div>
-
-            <div class="food-item">
-              <div class="food-image">
-                <img src="images/menu/cacik.jpg" alt="Tzatziki" />
-              </div>
-              <div class="food-details">
-                <h1>Tzatziki</h1>
-                <p>purslane tzatziki, cucumber tzatziki and lettuce tzatziki</p>
-              </div>
-              <div class="food-price">$4</div>
-            </div>
-          </div>
-
-          <!-- sweets -->
-          <div class="content food-section">
-            <h2>
-              sweets
-              <hr />
-            </h2>
-
-            <div class="food-item">
-              <div class="food-image">
-                <img
-                  src="images/menu/fistikli-baklava.jpg"
-                  alt="Pistachio Baklava"
-                />
-              </div>
-              <div class="food-details">
-                <h1>pistachio Baklava</h1>
-                <p></p>
-              </div>
-              <div class="food-price">$35</div>
-            </div>
-
-            <div class="food-item">
-              <div class="food-image">
-                <img
-                  src="images/menu/cevizli-baklava.jpg"
-                  alt="Walnut Baklava"
-                />
-              </div>
-              <div class="food-details">
-                <h1>Walnut baklava</h1>
-              </div>
-              <div class="food-price">$30</div>
-            </div>
-
-            <div class="food-item">
-              <div class="food-image">
-                <img
-                  src="images/menu/raspberry-cheesecake.jpg"
-                  alt="Cheesecake"
-                />
-              </div>
-              <div class="food-details">
-                <h1>Chesscake</h1>
-                <p>
-                  Fresh raspberry, lemon, San Sebastian, Brownie, Cherry,
-                  Strawberry , chocolate, Käsekuchen and forest fruit cheesecake
-                </p>
-              </div>
-              <div class="food-price">$28</div>
-            </div>
-
-            <div class="food-item">
-              <div class="food-image">
-                <img src="images/menu/rice-pudding.jpg" alt="Rice Pudding" />
-              </div>
-              <div class="food-details">
-                <h1>rice pudding</h1>
-                <p>
-                  Starchy, Starch-free, Mastic gum, lemon and Caramel Rice
-                  Pudding
-                </p>
-              </div>
-              <div class="food-price">$15</div>
-            </div>
+            <!-- More food cards can be added -->
           </div>
         </div>
       </div>
 
       <!-- ---------------------------MENU END HERE--------------------------- -->
+
+      <!-- ---------------------------RESERVATION START HERE--------------------------- -->
+
+      <dialog>
+        <div class="close-btn">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="form">
+          <div class="form-body">
+            <div class="pagination">
+              <div class="number active">1</div>
+              <div class="bar"></div>
+              <div class="number">2</div>
+              <div class="bar"></div>
+              <div class="number">3</div>
+              <div class="bar"></div>
+              <div class="number">4</div>
+            </div>
+            <div class="steps">
+              <div class="step">
+                <h4>Contact details</h4>
+                <p>Please enter your information</p>
+                <div class="grid">
+                  <div class="col">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" />
+                  </div>
+                  <div class="col">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" />
+                  </div>
+                  <div class="col">
+                    <label for="phone">Phone Number</label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      inputmode="numeric"
+                      pattern="0[0-9]{9}"
+                      placeholder="05XXXXXXXXX"
+                      maxlength="11"
+                      title="Please enter a 11-digit number starting with 0"
+                    />
+                  </div>
+                  <div class="col">
+                    <label for="message">Message</label>
+                    <input type="text" id="message" />
+                  </div>
+                </div>
+              </div>
+              <div class="step">
+                <h4>No Of People</h4>
+                <p>
+                  Please select how many people will attend the reservation. You
+                  can choose between 1 and 10 guests.
+                </p>
+                <div class="guest-count-selection reserv-card"></div>
+              </div>
+              <div class="step">
+                <h4>Reservation Date</h4>
+                <p></p>
+
+                <div class="calendar">
+                  <div class="calendar-header">
+                    <div id="prev" class="btn">
+                      <i class="fa-solid fa-arrow-left"></i>
+                    </div>
+                    <div class="month-year"></div>
+                    <div id="next" class="btn">
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                  </div>
+                  <div class="weekdays">
+                    <div>Sun</div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+                  </div>
+
+                  <div class="days"></div>
+                </div>
+              </div>
+
+              <div class="step">
+                <h4>Reservation Time</h4>
+                <p>
+                  Please choose a time slot for your reservation. Available
+                  hours range from 13:00 to 21:00.
+                </p>
+
+                <div class="reserv-time-selection reserv-card time-card"></div>
+              </div>
+            </div>
+          </div>
+          <div class="form-footer">
+            <button class="form-prev btn" disabled>Previous</button>
+            <button class="form-next btn" id="sendButton">Next</button>
+          </div>
+        </div>
+      </dialog>
+
+      <!-- ---------------------------RESERVATION END HERE--------------------------- -->
     </section>
     <!-- ---------------------------SECTION END HERE--------------------------- -->
-
     <!-- ---------------------------FOOTER START HERE--------------------------- -->
 
     <footer class="footer">
@@ -559,6 +490,70 @@
     </div>
     <!-- ---------------------------FOOTER END HERE--------------------------- -->
 
+    <script>
+      const categoryLinks = document.querySelectorAll(
+        "#categoryList .nav-link"
+      );
+      const menuItems = document.querySelectorAll(".menu-item");
+      const searchInput = document.getElementById("searchInput");
+      const typeFilter = document.getElementById("typeFilter");
+      const priceSort = document.getElementById("priceSort");
+
+      categoryLinks.forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          document
+            .querySelector("#categoryList .active")
+            .classList.remove("active");
+          link.classList.add("active");
+          filterMenu();
+        });
+      });
+
+      searchInput.addEventListener("input", filterMenu);
+      typeFilter.addEventListener("change", filterMenu);
+      priceSort.addEventListener("change", sortMenu);
+
+      function filterMenu() {
+        const activeCategory = document.querySelector("#categoryList .active")
+          .dataset.category;
+        const searchQuery = searchInput.value.toLowerCase();
+        const selectedType = typeFilter.value;
+
+        menuItems.forEach((item) => {
+          const itemCategory = item.dataset.category;
+          const itemType = item.dataset.type;
+          const itemText = item
+            .querySelector(".card-title")
+            .textContent.toLowerCase();
+          let isVisible = true;
+
+          if (activeCategory !== "all" && itemCategory !== activeCategory) {
+            isVisible = false;
+          }
+          if (selectedType !== "all" && itemType !== selectedType) {
+            isVisible = false;
+          }
+          if (!itemText.includes(searchQuery)) {
+            isVisible = false;
+          }
+
+          item.style.display = isVisible ? "block" : "none";
+        });
+      }
+
+      function sortMenu() {
+        const sortOption = priceSort.value;
+        const container = document.getElementById("menuContainer");
+        const sortedItems = Array.from(menuItems).sort((a, b) => {
+          const priceA = parseFloat(a.dataset.price);
+          const priceB = parseFloat(b.dataset.price);
+          return sortOption === "asc" ? priceA - priceB : priceB - priceA;
+        });
+        sortedItems.forEach((item) => container.appendChild(item));
+      }
+    </script>
+
     <!-- IMPORT BOOTSTRAP JS -->
     <script src="js/bootstrap.min.js"></script>
 
@@ -567,8 +562,5 @@
 
     <!-- IMPORT FAQs JS -->
     <script src="js/faq.js"></script>
-
-    <!-- IMPORT TABS MENU JS -->
-    <script src="js/tabsmenu.js"></script>
   </body>
 </html>

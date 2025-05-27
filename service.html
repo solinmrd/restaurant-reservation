@@ -12,6 +12,7 @@
     <!-- IMPORT CSS FILES -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/reservation.css" />
     <link rel="stylesheet" href="css/services.css" />
 
     <!-- IMPORT GOOGLE ICONS -->
@@ -144,7 +145,6 @@
       </div>
     </nav>
     <!-- ---------------------------HEADER END HERE--------------------------- -->
-
     <!-- ---------------------------BANNER START HERE--------------------------- -->
 
     <div class="banner">
@@ -160,7 +160,6 @@
     <!-- ---------------------------SECTION START HERE--------------------------- -->
 
     <section class="container section">
-      <!-- ---------------------------Reservation START HERE--------------------------- -->
       <!-- ---------------------------SERVICES START HERE--------------------------- -->
 
       <div class="row">
@@ -312,10 +311,111 @@
 
       <!-- ---------------------------SERVICES END HERE--------------------------- -->
 
-      <!-- ---------------------------Reservation END HERE--------------------------- -->
+      <!-- ---------------------------RESERVATION START HERE--------------------------- -->
+
+      <dialog>
+        <div class="close-btn">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="form">
+          <div class="form-body">
+            <div class="pagination">
+              <div class="number active">1</div>
+              <div class="bar"></div>
+              <div class="number">2</div>
+              <div class="bar"></div>
+              <div class="number">3</div>
+              <div class="bar"></div>
+              <div class="number">4</div>
+            </div>
+            <div class="steps">
+              <div class="step">
+                <h4>Contact details</h4>
+                <p>Please enter your information</p>
+                <div class="grid">
+                  <div class="col">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" />
+                  </div>
+                  <div class="col">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" />
+                  </div>
+                  <div class="col">
+                    <label for="phone">Phone Number</label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      inputmode="numeric"
+                      pattern="0[0-9]{9}"
+                      placeholder="05XXXXXXXXX"
+                      maxlength="11"
+                      title="Please enter a 11-digit number starting with 0"
+                    />
+                  </div>
+                  <div class="col">
+                    <label for="message">Message</label>
+                    <input type="text" id="message" />
+                  </div>
+                </div>
+              </div>
+              <div class="step">
+                <h4>No Of People</h4>
+                <p>
+                  Please select how many people will attend the reservation. You
+                  can choose between 1 and 10 guests.
+                </p>
+                <div class="guest-count-selection reserv-card"></div>
+              </div>
+              <div class="step">
+                <h4>Reservation Date</h4>
+                <p></p>
+
+                <div class="calendar">
+                  <div class="calendar-header">
+                    <div id="prev" class="btn">
+                      <i class="fa-solid fa-arrow-left"></i>
+                    </div>
+                    <div class="month-year"></div>
+                    <div id="next" class="btn">
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                  </div>
+                  <div class="weekdays">
+                    <div>Sun</div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+                  </div>
+
+                  <div class="days"></div>
+                </div>
+              </div>
+
+              <div class="step">
+                <h4>Reservation Time</h4>
+                <p>
+                  Please choose a time slot for your reservation. Available
+                  hours range from 13:00 to 21:00.
+                </p>
+
+                <div class="reserv-time-selection reserv-card time-card"></div>
+              </div>
+            </div>
+          </div>
+          <div class="form-footer">
+            <button class="form-prev btn" disabled>Previous</button>
+            <button class="form-next btn" id="sendButton">Next</button>
+          </div>
+        </div>
+      </dialog>
+
+      <!-- ---------------------------RESERVATION END HERE--------------------------- -->
     </section>
     <!-- ---------------------------SECTION END HERE--------------------------- -->
-
     <!-- ---------------------------FOOTER START HERE--------------------------- -->
 
     <footer class="footer">
@@ -409,8 +509,5 @@
 
     <!-- IMPORT RESERVATION JS -->
     <script src="js/reservation.js"></script>
-
-    <!-- IMPORT FAQs JS -->
-    <script src="js/faq.js"></script>
   </body>
 </html>
