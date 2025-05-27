@@ -1,0 +1,19 @@
+ .category-sidebar {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      padding-top: 1rem;
+      background-color: #fff3cd;
+    }
+    .food-card img {
+      height: 200px;
+      object-fit: cover;
+    }
+    .gold-btn {
+      background-color: #f1c40f;
+      color: #000;
+    }
+    .nav-link.active {
+      font-weight: bold;
+      color: #d35400;
+    }

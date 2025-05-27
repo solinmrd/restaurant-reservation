@@ -1142,3 +1142,13 @@ footer .social-media-icons .fa-brands:hover {
     transform: translateY(0px);
   }
 }
+
+
+
+/*  */
+[data-include] {
+  display: none; /* İlk başta gizli */
+}
+[data-loaded="true"] {
+  display: block; /* Yüklendikten sonra göster */
+}
