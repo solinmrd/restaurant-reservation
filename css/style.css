@@ -92,11 +92,11 @@ nav {
   background-color: #e8b10e;
   color: #000;
 }
-.btn-yellow-border a{
+.btn-yellow-border a {
   color: #e8b10e;
   text-decoration: none;
 }
-.btn-yellow-border a:hover{
+.btn-yellow-border a:hover {
   color: #000;
 }
 .navbar-toggler {
@@ -157,10 +157,10 @@ nav {
   font-size: 18px;
   text-decoration: none;
 }
-#book-table{
+#book-table {
   display: none;
 }
-#login{
+#login {
   display: none;
 }
 
@@ -228,6 +228,7 @@ nav {
   font-size: 1rem;
   font-weight: normal;
   color: #fff;
+  text-transform: capitalize;
   opacity: 0;
   transform: translateY(60%);
 }
@@ -361,7 +362,6 @@ nav {
   gap: 1.5rem;
 }
 .services-card .card {
-
   float: left;
   border: 2px solid #e8b10e;
   border-radius: 0;
@@ -438,12 +438,13 @@ nav {
 .about-paragraph h2 {
   color: #000;
   font-weight: 600;
+  font-size: 1.6rem;
 }
 .about-paragraph h2 span {
   color: #e8b10e;
 }
 .about-paragraph p {
-  font-size: 16px;
+  font-size: 0.9rem;
   color: #000;
   opacity: 0.9;
   text-align: justify;
@@ -502,12 +503,13 @@ nav {
   font-weight: 600;
   color: #e8b10e;
   text-transform: capitalize;
+  font-size: 1.6rem;
 }
 .section-title h5 {
   padding-top: 0.2rem;
-  color: #000000bb;
-  font-weight: 300;
-  font-size: 1rem;
+  color: #666;
+  font-weight: 400;
+  font-size: 0.9rem;
 }
 .team-section {
   display: flex;
@@ -538,7 +540,7 @@ nav {
 }
 
 .team-section .card .card-body h3 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: #e8b10e;
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -851,7 +853,7 @@ dialog .form {
   transition: all.3s ease-in;
 }
 .time-card .selection-item {
- height: 2.5rem;
+  height: 2.5rem;
 }
 .reserv-card .selection-item:hover {
   border: 2px solid transparent;
@@ -941,7 +943,6 @@ dialog .form {
   font-weight: 600;
 }
 
-
 /* --------------------------------------------------FOOTER STYLE START HERE*/
 .footer {
   background-color: #000;
@@ -959,9 +960,11 @@ dialog .form {
 .footer .footer-about {
   text-align: justify;
   padding-right: 1.5rem;
+  font-size: 0.9rem;
 }
 .footer h4 {
   font-weight: 600;
+  font-size: 1.3rem;
   text-transform: capitalize;
 }
 .footer ul {
@@ -973,6 +976,7 @@ dialog .form {
 .footer ul li a {
   text-decoration: none;
   color: #fff;
+  font-size: 0.9rem;
   font-weight: 400;
   text-transform: capitalize;
 }
@@ -1041,6 +1045,7 @@ footer .social-media-icons .fa-brands:hover {
 .copyright {
   background-color: #000;
   color: #fff;
+
   text-align: center;
   border-top: 1px solid #ddd;
 }
@@ -1049,7 +1054,7 @@ footer .social-media-icons .fa-brands:hover {
 }
 .copyright .copyright-text {
   padding: 1rem;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #ddd;
 }
 .copyright .copyright-text p {
@@ -1069,7 +1074,7 @@ footer .social-media-icons .fa-brands:hover {
 }
 #banner-title {
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 #banner-p {
   width: 100%;
@@ -1090,8 +1095,8 @@ footer .social-media-icons .fa-brands:hover {
 }
 
 /* --------------------------------------------------FAQs STYLE START HERE*/
-.faq-section{
-  max-width:900px; /* İçeriğin çok geniş olmaması için */
+.faq-section {
+  max-width: 90%; /* İçeriğin çok geniş olmaması için */
   margin: 0 auto;
   text-align: center;
 }
@@ -1107,43 +1112,41 @@ footer .social-media-icons .fa-brands:hover {
   justify-content: space-between;
   align-items: center;
 }
-.question h3{
-  font-size: 1.2rem;
+.question h3 {
+  font-size: 1.1rem;
 }
 .question i {
   font-size: 1.4rem;
   color: #000;
-  transition: transform .5s ease-in;
+  transition: transform 0.5s ease-in;
 }
-.answer{
+.answer {
   max-height: 0;
   overflow: hidden;
   transition: max-height 1.4s ease;
 }
-.answer p{
+.answer p {
   padding-top: 1rem;
   line-height: 1.6;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
-.faq.active .answer{
+.faq.active .answer {
   max-height: 300px;
-  animation: fade .8s ease-in-out;
+  animation: fade 0.8s ease-in-out;
 }
-.faq.active i{
+.faq.active i {
   transform: rotate(180deg);
 }
 @keyframes fade {
-  from{
+  from {
     opacity: 0;
     transform: translateY(-10px);
   }
-  to{
+  to {
     opacity: 1;
     transform: translateY(0px);
   }
 }
-
-
 
 /*  */
 [data-include] {

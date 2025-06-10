@@ -1,0 +1,50 @@
+.category-scroll {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 1rem;
+}
+.category-scroll button {
+  display: inline-block;
+  margin-right: 10px;
+  background: #000;
+  border: none;
+  color: #fff;
+  font-weight: 400;
+  text-transform: capitalize;
+  padding: 0.3rem 1.5rem;
+  transition: all 0.3s ease-in;
+}
+.category-scroll button.active,
+.category-scroll button:hover {
+  background-color: #e8b10e;
+  color: #000;
+}
+.card {
+  background-color: #fff;
+  height: 50vh;
+  color: #000;
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: scale(1.03);
+}
+.card img {
+  height: 200px;
+  object-fit: cover;
+}
+.card-title {
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.card-paragraph {
+  color: #a09f9f;
+  text-align: justify;
+  font-size: 0.8rem;
+  margin: 0.5rem 0rem;
+}
+.card-price {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000;
+}
