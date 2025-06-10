@@ -8,7 +8,6 @@ function createForm() {
     bookBtn.addEventListener("click", () => {
       // Popup'ı aç
       dialog.showModal();
-
       overflowHidden();
       generatePersonOptions();
     });
@@ -27,7 +26,7 @@ function createForm() {
       for (let i = 1; i <= 10; i++) {
         const creatNum = document.createElement("div");
         creatNum.classList.add("selection-item");
-        creatNum.dataset.value = i; // ✅ Değer için data attribute ekliyoruz
+        creatNum.dataset.value = i;
 
         const numOfPerson = document.createElement("h3");
         numOfPerson.className = "selection-item-label";
@@ -137,12 +136,11 @@ function createForm() {
         daysContainer.appendChild(dayDiv);
       }
 
-      // current month's dates
       for (let i = 1; i <= lastDay; i++) {
         const dayDiv = document.createElement("div");
-        dayDiv.classList.add("day"); // Günlere sınıf ekleyelim
+        dayDiv.classList.add("day");
         dayDiv.textContent = i;
-        dayDiv.dataset.date = i; //  data-date olarak günü kaydet
+        dayDiv.dataset.date = i;
 
         if (
           i === today.getDate() &&
@@ -169,7 +167,6 @@ function createForm() {
         daysContainer.appendChild(dayDiv);
       }
 
-      // next month's dates
       // const nextMonthStartDay = 7 - new Date(year, month + 1, 0).getDay - 1;
       const remainingCells = 42 - daysContainer.children.length;
       for (let i = 1; i <= remainingCells; i++) {
@@ -348,7 +345,7 @@ createForm();
         })
         // Başarılı rezervasyon
         .then((data) => {
-          console.log("API Response:", data); //  response
+          console.log("API Response:", data); // response
 
           successPopup();
 
@@ -400,7 +397,6 @@ createForm();
           }
           resetForm();
 
-         
           createForm();
           currentPage = 1;
           movePage();

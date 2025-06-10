@@ -74,7 +74,7 @@ adminSignBtn.addEventListener("click", () => {
       return res.json();
     })
     .then(() => {
-      alert("Login successful! 🎉");
+      alert("Login successful!");
 
       // ADMİN BİLGİLERİ LOCALSTORAGE'A KAYDET
       localStorage.setItem("name", name);
@@ -83,7 +83,7 @@ adminSignBtn.addEventListener("click", () => {
       window.location.href = "admin-dashboard.html";
     })
     .catch((err) => {
-      alert("Incorrect username or password ❌");
+      alert("Incorrect username or password!");
       console.error(err);
       document.getElementById("username").value = "";
       document.getElementById("password").value = "";
@@ -103,7 +103,6 @@ function showPassword() {
 // ---------------------------------------------------------USER GİRİŞ İŞLEMLERİ--------------------------------------------------
 // DOM tamamen yüklendiğinde bu kod çalışır
 document.addEventListener("DOMContentLoaded", () => {
-
   const loginButton = document.getElementById("user-sign-btn");
   loginButton.addEventListener("click", () => {
     const name = document.getElementById("name").value.trim();
@@ -137,7 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return res.json();
       })
       .then((reservations) => {
-        alert("Login successful! 🎉");
+        alert("Login successful!");
         console.log("Login successful, now saving user name...");
         // KULLANICININ KİMLİĞİNİ TANITAN BİLGİLERİ LOCALSTORAGE'A KAYDET
         localStorage.setItem("userName", name);
