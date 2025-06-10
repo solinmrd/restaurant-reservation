@@ -494,31 +494,3 @@ function unsuccessPopup() {
     overflowAuto();
   });
 }
-
-function overflowAuto() {
-  // Popup kapatıldığında arka plana scroll olabilmesi için
-  document.body.style.overflow = "auto";
-  // Popup kapatıldığında gerçekleşecek olan animasyon
-  dialog.style.opacity = "0";
-  dialog.style.transform = "scale(0.9)";
-
-  setTimeout(() => {
-    dialog.close();
-  }, 300); // Animasyon süresi kadar bekle
-}
-
-function overflowHidden() {
-  // Popup açıldığında arka plana scroll olmaması için
-  document.body.style.overflow = "hidden";
-
-  //Popup açıldığında gerçekleşecek olan animasyon animasyon
-  dialog.style.opacity = "0";
-  dialog.style.transform = "scale(0.9)";
-
-  setTimeout(() => {
-    dialog.style.transition =
-      "opacity 0.5s ease-in-out, transform 0.3s ease-in-out";
-    dialog.style.opacity = "1";
-    dialog.style.transform = "scale(1)";
-  }, 10);
-}

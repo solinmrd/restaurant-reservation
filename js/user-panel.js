@@ -314,6 +314,8 @@ function setupSendButton() {
 
 // Kullanıcının rezervasyonlarını getir
 async function fetchActiveReservations(userName, userPhone, userEmail) {
+
+  
   try {
     const response = await fetch(
       "http://ec2-18-195-172-95.eu-central-1.compute.amazonaws.com:8080/api/customer/reservations",
@@ -326,6 +328,8 @@ async function fetchActiveReservations(userName, userPhone, userEmail) {
           name: userName,
           phoneNumber: userPhone,
           email: userEmail,
+
+
         }),
       }
     );
@@ -398,6 +402,7 @@ function createTableRow(rsv) {
 //Manage Reservation Kartları Oluşturma
 function createReservationCard(container, isFuture = true) {
   return (rsv) => {
+    
     const card = document.createElement("div");
     card.className = "card future-card";
     card.innerHTML = `
@@ -438,7 +443,7 @@ function createReservationCard(container, isFuture = true) {
           .then((response) => response.json())
           .then((data) => {
             console.log("Veri:", data);
-            alert("Reservation has deleted.");
+            deleteReservPopup();
           })
           .catch((error) => {
             console.error("Hata:", error);
@@ -580,4 +585,44 @@ function blurBackground() {
 
   // Overlay'i body'ye ekle
   document.body.appendChild(overlay);
+}
+function deleteReservPopup() {
+  //  Eksik alan varsa uyarı popup'ı.
+  const errDiv = document.createElement("div");
+  errDiv.className = "popup center active";
+
+  const iconDiv = document.createElement("div");
+  iconDiv.className = "state-popup-icon success-icon";
+  const errIcon = document.createElement("i");
+  errIcon.className = "fa fa-check";
+
+  const errTitle = document.createElement("div");
+  errTitle.className = "state-title err-title";
+  errTitle.innerHTML = "Reservation Cancelled!";
+
+  const errDescription = document.createElement("div");
+  errDescription.className = "state-description err-description";
+  errDescription.innerHTML = "Your reservation has been successfully deleted. If you need further assistance, feel free to contact us.";
+
+  const okDiv = document.createElement("div");
+  okDiv.className = "ok-btn";
+  const okButton = document.createElement("button");
+  okButton.className = "ok-popup-btn";
+  okButton.innerHTML = "Close";
+
+  errDiv.appendChild(iconDiv);
+  errDiv.appendChild(errTitle);
+  errDiv.appendChild(errDescription);
+  errDiv.appendChild(okDiv);
+  iconDiv.appendChild(errIcon);
+  okDiv.appendChild(okButton);
+
+  document.body.appendChild(errDiv);
+  overflowHidden();
+
+  // ✅ OK butonuna basıldığında popup ve overlay'i kaldır
+  okButton.addEventListener("click", () => {
+    document.body.removeChild(errDiv);
+    overflowAuto();
+  });
 }

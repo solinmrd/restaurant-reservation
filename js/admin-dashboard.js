@@ -297,18 +297,17 @@ document
     renderReservations(filtered);
   });
 
-document.addEventListener("DOMContentLoaded", loadAllReservations);
 
 document.addEventListener("DOMContentLoaded", loadAllReservations);
-document.getElementById("searchInput").addEventListener("keyup", function () {
-  const value = this.value.toLowerCase();
-  const rows = document.querySelectorAll("#reservationsTable tbody tr");
+// document.getElementById("searchInput").addEventListener("keyup", function () {
+//   const value = this.value.toLowerCase();
+//   const rows = document.querySelectorAll("#reservationsTable tbody tr");
 
-  rows.forEach((row) => {
-    const name = row.cells[2].textContent.toLowerCase();
-    row.style.display = name.includes(value) ? "" : "none";
-  });
-});
+//   rows.forEach((row) => {
+//     const name = row.cells[2].textContent.toLowerCase();
+//     row.style.display = name.includes(value) ? "" : "none";
+//   });
+// });
 
 
 
@@ -333,7 +332,7 @@ function changePassword() {
 
       // Not: id'yi backendde name ile eşleştiriyorsanız id = 0 da olabilir, dummy olarak
       const adminDto = {
-        id: 1, // veya backendde id zorunlu değilse bu alanı çıkar
+        // id: 1, // veya backendde id zorunlu değilse bu alanı çıkar
         name: adminName,
         password: currentPassword,
       };
@@ -354,7 +353,11 @@ function changePassword() {
           return res.text(); // Backend sadece String döndürüyor gibi
         })
         .then((message) => {
-          alert("✅ " + message);
+          // alert("✅ " + message);
+          // Başarılı değişiklik sonrası, localStorage'daki password'u güncelle
+          localStorage.setItem("password", newPassword);
+          // Popup göster  
+          changePasPopup();
         })
         .catch((err) => {
           alert("❌ Error: " + err.message);
@@ -362,3 +365,69 @@ function changePassword() {
     });
 }
 
+function changePasPopup() {
+  //  Eksik alan varsa uyarı popup'ı.
+  const errDiv = document.createElement("div");
+  errDiv.className = "popup center active";
+
+  const iconDiv = document.createElement("div");
+  iconDiv.className = "state-popup-icon success-icon";
+  const errIcon = document.createElement("i");
+  errIcon.className = "fa fa-check";
+
+  const errTitle = document.createElement("div");
+  errTitle.className = "state-title err-title";
+  errTitle.innerHTML = "Password Changed Successfully!";
+
+  const errDescription = document.createElement("div");
+  errDescription.className = "state-description err-description";
+  errDescription.innerHTML = "Your password has been changed successfully. Please log in again with your new password.";
+
+  const okDiv = document.createElement("div");
+  okDiv.className = "ok-btn";
+  const okButton = document.createElement("button");
+  okButton.className = "ok-popup-btn";
+  okButton.innerHTML = "Close";
+
+  errDiv.appendChild(iconDiv);
+  errDiv.appendChild(errTitle);
+  errDiv.appendChild(errDescription);
+  errDiv.appendChild(okDiv);
+  iconDiv.appendChild(errIcon);
+  okDiv.appendChild(okButton);
+
+  document.body.appendChild(errDiv);
+  overflowHidden();
+
+  // ✅ OK butonuna basıldığında popup ve overlay'i kaldır
+  okButton.addEventListener("click", () => {
+    document.body.removeChild(errDiv);
+    overflowAuto();
+    // Popup kapandıktan sonra, admin sayfasına yönlendir
+    window.location.href = "admin-dashboard.html";
+  });
+}
+function overflowAuto() {
+  document.body.style.overflow = "auto";
+
+  const overlay = document.querySelector(".overlay");
+  if (overlay) {
+    overlay.classList.remove("active");
+  }
+}
+
+function overflowHidden() {
+  // Scroll'u engelle
+  document.body.style.overflow = "hidden";
+
+  // Eğer overlay daha önce eklenmemişse, oluştur ve ekle
+  let overlay = document.querySelector(".overlay");
+  if (!overlay) {
+    overlay = document.createElement("div");
+    overlay.className = "overlay";
+    document.body.appendChild(overlay);
+  }
+
+  // Overlay'i aktif et
+  overlay.classList.add("active");
+}

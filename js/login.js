@@ -51,8 +51,9 @@ adminSignBtn.addEventListener("click", () => {
   const password = document.getElementById("password").value.trim();
 
   // Eğer boş alan varsa
-  if (username === "" || password === "") {
-    alert("Please fill in all fields!");
+  if (name === "" || password === "") {
+    // alert("Please fill in all fields!");
+    alertPopup(); // Eksik alan varsa uyarı popup'ı göster
     return;
   }
 
@@ -74,16 +75,18 @@ adminSignBtn.addEventListener("click", () => {
       return res.json();
     })
     .then(() => {
-      alert("Login successful!");
+      successPopup("admin-dashboard.html");
 
       // ADMİN BİLGİLERİ LOCALSTORAGE'A KAYDET
+
       localStorage.setItem("name", name);
       localStorage.setItem("password", password);
       // Başarılıysa dashboard'a gider
-      window.location.href = "admin-dashboard.html";
+      // window.location.href = "admin-dashboard.html";
     })
     .catch((err) => {
-      alert("Incorrect username or password!");
+      // alert("Incorrect username or password!");
+      unsuccessPopup(); // Başarısız giriş mesajı için popup göster
       console.error(err);
       document.getElementById("username").value = "";
       document.getElementById("password").value = "";
@@ -112,7 +115,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const phone = document.getElementById("phone").value.trim();
 
     if (!name || !email || !phone) {
-      alert("Please enter all fields.");
+      // alert("Please enter all fields.");
+      alertPopup();
       return;
     }
 
@@ -136,7 +140,8 @@ document.addEventListener("DOMContentLoaded", () => {
         return res.json();
       })
       .then((reservations) => {
-        alert("Login successful!");
+        // alert("login successful");
+        successPopup("user-dashboard.html"); // Başarılı giriş mesajı için popup göster
         console.log("Login successful, now saving user name...");
         // KULLANICININ KİMLİĞİNİ TANITAN BİLGİLERİ LOCALSTORAGE'A KAYDET
         localStorage.setItem("userName", name);
@@ -144,10 +149,11 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("userPhone", phone);
         // console.log("Saved userName:", localStorage.getItem('userName'));
 
-        window.location.href = "user-dashboard.html"; // Başarılıysa kullanıcı paneline yönlendir
+        // window.location.href = "user-dashboard.html"; // Başarılıysa kullanıcı paneline yönlendir
       })
       .catch((err) => {
-        alert("An error occurred: " + err.message);
+        // alert("An error occurred: " + err.message);
+        unsuccessPopup(); // Başarısız giriş mesajı için popup göster
         console.error(err);
 
         document.getElementById("name").value = "";
@@ -156,3 +162,170 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   });
 });
+
+function successPopup() {
+  const successDiv = document.createElement("div");
+  successDiv.className = "popup center active";
+
+  const iconDiv = document.createElement("div");
+  iconDiv.className = "state-popup-icon success-icon";
+  const successIcon = document.createElement("i");
+  successIcon.className = "fa fa-check";
+
+  const succcessTitle = document.createElement("div");
+  succcessTitle.className = "state-title success-title";
+  succcessTitle.innerHTML = " Login Successful!";
+
+  const successDescription = document.createElement("div");
+  successDescription.className = "state-description success-description";
+  successDescription.innerHTML =
+    "Welcome back! You have successfully signed in to your dashboard.";
+
+  const okDiv = document.createElement("div");
+  okDiv.className = "ok-btn";
+  const okButton = document.createElement("button");
+  okButton.className = "ok-popup-btn";
+  okButton.innerHTML = "Close";
+
+  successDiv.appendChild(iconDiv);
+  successDiv.appendChild(succcessTitle);
+  successDiv.appendChild(successDescription);
+  successDiv.appendChild(okDiv);
+  iconDiv.appendChild(successIcon);
+  okDiv.appendChild(okButton);
+
+  document.body.appendChild(successDiv);
+
+  overflowHidden();
+
+  // ✅ OK butonuna tıklandığında animasyonla kapat, sonra yönlendir
+  okButton.addEventListener("click", () => {
+    // Animasyon başlat
+    successDiv.style.transition = "opacity 0.3s ease, transform 0.3s ease";
+    successDiv.style.opacity = "0";
+    successDiv.style.transform = "scale(0.9)";
+
+    const overlay = document.querySelector(".overlay");
+    if (overlay) {
+      overlay.classList.remove("active");
+    }
+
+    setTimeout(() => {
+      document.body.removeChild(successDiv);
+      overflowAuto();
+      // Başarılı giriş sonrası yönlendirme
+      if (localStorage.getItem("name")==="admin") {
+        window.location.href = "admin-dashboard.html";
+      } else {
+        window.location.href = "user-dashboard.html";
+      }
+    }, 300); // Animasyon süresi kadar beklet
+  });
+}
+
+function unsuccessPopup() {
+  //  Başarısız giriş mesajı için popup oluşturma.
+  const errDiv = document.createElement("div");
+  errDiv.className = "popup center active";
+
+  const iconDiv = document.createElement("div");
+  iconDiv.className = "state-popup-icon err-icon";
+  const errIcon = document.createElement("i");
+  errIcon.className = "fa  fa-times-circle";
+
+  const errTitle = document.createElement("div");
+  errTitle.className = "state-title err-title";
+  errTitle.innerHTML = "Login Failed!";
+
+  const errDescription = document.createElement("div");
+  errDescription.className = "state-description err-description";
+  errDescription.innerHTML =
+    "The information you entered is incorrect. Please check and try again!";
+
+  const okDiv = document.createElement("div");
+  okDiv.className = "ok-btn";
+  const okButton = document.createElement("button");
+  okButton.className = "ok-popup-btn";
+  okButton.innerHTML = "Close";
+
+  errDiv.appendChild(iconDiv);
+  errDiv.appendChild(errTitle);
+  errDiv.appendChild(errDescription);
+  errDiv.appendChild(okDiv);
+  iconDiv.appendChild(errIcon);
+  okDiv.appendChild(okButton);
+
+  document.body.appendChild(errDiv);
+  overflowHidden();
+
+  // ✅ OK butonuna basıldığında popup ve overlay'i kaldır
+  okButton.addEventListener("click", () => {
+    document.body.removeChild(errDiv);
+    overflowAuto();
+  });
+}
+function alertPopup() {
+  //  Eksik alan varsa uyarı popup'ı.
+  const errDiv = document.createElement("div");
+  errDiv.className = "popup center active";
+
+  const iconDiv = document.createElement("div");
+  iconDiv.className = "state-popup-icon warning-icon";
+  const errIcon = document.createElement("i");
+  errIcon.className = "fa-solid fa-triangle-exclamation";
+
+  const errTitle = document.createElement("div");
+  errTitle.className = "state-title err-title";
+  errTitle.innerHTML = "Missing Information!";
+
+  const errDescription = document.createElement("div");
+  errDescription.className = "state-description err-description";
+  errDescription.innerHTML = "Please make sure all fields are filled in.";
+
+  const okDiv = document.createElement("div");
+  okDiv.className = "ok-btn";
+  const okButton = document.createElement("button");
+  okButton.className = "ok-popup-btn";
+  okButton.innerHTML = "Close";
+
+  errDiv.appendChild(iconDiv);
+  errDiv.appendChild(errTitle);
+  errDiv.appendChild(errDescription);
+  errDiv.appendChild(okDiv);
+  iconDiv.appendChild(errIcon);
+  okDiv.appendChild(okButton);
+
+  document.body.appendChild(errDiv);
+  overflowHidden();
+
+  // ✅ OK butonuna basıldığında popup ve overlay'i kaldır
+  okButton.addEventListener("click", () => {
+    document.body.removeChild(errDiv);
+    overflowAuto();
+  });
+}
+
+function overflowAuto() {
+  document.body.style.overflow = "auto";
+
+  const overlay = document.querySelector(".overlay");
+  if (overlay) {
+    overlay.classList.remove("active");
+  }
+}
+
+function overflowHidden() {
+  // Scroll'u engelle
+  document.body.style.overflow = "hidden";
+
+  // Eğer overlay daha önce eklenmemişse, oluştur ve ekle
+  let overlay = document.querySelector(".overlay");
+  if (!overlay) {
+    overlay = document.createElement("div");
+    overlay.className = "overlay";
+    document.body.appendChild(overlay);
+  }
+
+  // Overlay'i aktif et
+  overlay.classList.add("active");
+}
