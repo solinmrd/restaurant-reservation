@@ -12,7 +12,7 @@
     <!-- IMPORT CSS FILES -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
-    <link rel="stylesheet" href="css/menu.css" />
+    <link rel="stylesheet" href="css/menu-page.css" />
     <link rel="stylesheet" href="css/reservation.css" />
 
     <!-- IMPORT GOOGLE ICONS -->
@@ -162,137 +162,20 @@
     <section class="container section">
       <!-- ---------------------------MENU START HERE--------------------------- -->
 
-      <div class="row">
-        <!-- Sidebar Categories -->
-        <div class="col-md-2 category-sidebar">
-          <h5>Categories</h5>
-          <ul class="nav flex-column" id="categoryList">
-            <li class="nav-item">
-              <a class="nav-link active" href="#" data-category="all">All</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" data-category="main">Main Dishes</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" data-category="fast">Fast Food</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" data-category="soup">Soups</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" data-category="salad">Salads</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" data-category="appetizer"
-                >Appetizers</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" data-category="sweet">Sweets</a>
-            </li>
-          </ul>
-        </div>
+      <!-- Category Filter -->
+      <div class="category-scroll">
+        <button class="active" data-category="all">All</button>
+        <button data-category="main dishes">main dishes</button>
+        <button data-category="fast food">fast food</button>
+        <button data-category="soups">Soups</button>
+        <button data-category="salads">Salads</button>
+        <button data-category="appetizers">appetizers</button>
+        <button data-category="sweets">sweets</button>
+      </div>
 
-        <!-- Main Content -->
-        <div class="col-md-10">
-          <!-- Search & Filters -->
-          <div class="row mt-3 mb-3">
-            <div class="col-md-6">
-              <input
-                type="text"
-                class="form-control"
-                id="searchInput"
-                placeholder="Search for a dish..."
-              />
-            </div>
-            <div class="col-md-3">
-              <select class="form-select" id="typeFilter">
-                <option value="all">Filter by Type</option>
-                <option value="vegan">Vegan</option>
-                <option value="gluten">Gluten-Free</option>
-              </select>
-            </div>
-            <div class="col-md-3">
-              <select class="form-select" id="priceSort">
-                <option value="default">Sort by Price</option>
-                <option value="asc">Low to High</option>
-                <option value="desc">High to Low</option>
-              </select>
-            </div>
-          </div>
-
-          <!-- Menu Grid -->
-          <div class="row" id="menuContainer">
-            <!-- Sample food card -->
-            <div
-              class="col-md-4 mb-4 menu-item"
-              data-category="main"
-              data-type="gluten"
-              data-price="12.99"
-            >
-              <div class="card food-card">
-                <img
-                  src="https://via.placeholder.com/300x200"
-                  class="card-img-top"
-                  alt="Dish"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Grilled Chicken</h5>
-                  <p class="card-text">
-                    Juicy grilled chicken served with seasonal vegetables.
-                  </p>
-                  <p class="fw-bold">$12.99</p>
-                  <a href="details.html?id=1" class="btn gold-btn">Details</a>
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-md-4 mb-4 menu-item"
-              data-category="salad"
-              data-type="vegan"
-              data-price="9.50"
-            >
-              <div class="card food-card">
-                <img
-                  src="https://via.placeholder.com/300x200"
-                  class="card-img-top"
-                  alt="Dish"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Vegan Salad</h5>
-                  <p class="card-text">
-                    Fresh greens with a tangy lemon dressing.
-                  </p>
-                  <p class="fw-bold">$9.50</p>
-                  <a href="details.html?id=2" class="btn gold-btn">Details</a>
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-md-4 mb-4 menu-item"
-              data-category="fast"
-              data-type="gluten"
-              data-price="6.99"
-            >
-              <div class="card food-card">
-                <img
-                  src="https://via.placeholder.com/300x200"
-                  class="card-img-top"
-                  alt="Dish"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Cheeseburger</h5>
-                  <p class="card-text">
-                    Classic cheeseburger with fries on the side.
-                  </p>
-                  <p class="fw-bold">$6.99</p>
-                  <a href="details.html?id=3" class="btn gold-btn">Details</a>
-                </div>
-              </div>
-            </div>
-            <!-- More food cards can be added -->
-          </div>
-        </div>
+      <!-- Menu Items -->
+      <div class="container py-4">
+        <div class="row" id="menuGrid"></div>
       </div>
 
       <!-- ---------------------------MENU END HERE--------------------------- -->
@@ -490,70 +373,8 @@
     </div>
     <!-- ---------------------------FOOTER END HERE--------------------------- -->
 
-    <script>
-      const categoryLinks = document.querySelectorAll(
-        "#categoryList .nav-link"
-      );
-      const menuItems = document.querySelectorAll(".menu-item");
-      const searchInput = document.getElementById("searchInput");
-      const typeFilter = document.getElementById("typeFilter");
-      const priceSort = document.getElementById("priceSort");
-
-      categoryLinks.forEach((link) => {
-        link.addEventListener("click", (e) => {
-          e.preventDefault();
-          document
-            .querySelector("#categoryList .active")
-            .classList.remove("active");
-          link.classList.add("active");
-          filterMenu();
-        });
-      });
-
-      searchInput.addEventListener("input", filterMenu);
-      typeFilter.addEventListener("change", filterMenu);
-      priceSort.addEventListener("change", sortMenu);
-
-      function filterMenu() {
-        const activeCategory = document.querySelector("#categoryList .active")
-          .dataset.category;
-        const searchQuery = searchInput.value.toLowerCase();
-        const selectedType = typeFilter.value;
-
-        menuItems.forEach((item) => {
-          const itemCategory = item.dataset.category;
-          const itemType = item.dataset.type;
-          const itemText = item
-            .querySelector(".card-title")
-            .textContent.toLowerCase();
-          let isVisible = true;
-
-          if (activeCategory !== "all" && itemCategory !== activeCategory) {
-            isVisible = false;
-          }
-          if (selectedType !== "all" && itemType !== selectedType) {
-            isVisible = false;
-          }
-          if (!itemText.includes(searchQuery)) {
-            isVisible = false;
-          }
-
-          item.style.display = isVisible ? "block" : "none";
-        });
-      }
-
-      function sortMenu() {
-        const sortOption = priceSort.value;
-        const container = document.getElementById("menuContainer");
-        const sortedItems = Array.from(menuItems).sort((a, b) => {
-          const priceA = parseFloat(a.dataset.price);
-          const priceB = parseFloat(b.dataset.price);
-          return sortOption === "asc" ? priceA - priceB : priceB - priceA;
-        });
-        sortedItems.forEach((item) => container.appendChild(item));
-      }
-    </script>
-
+    <!-- IMPORT MENU-PAGE.JS -->
+    <script src="js/menu-page.js"></script>
     <!-- IMPORT BOOTSTRAP JS -->
     <script src="js/bootstrap.min.js"></script>
 
@@ -562,5 +383,7 @@
 
     <!-- IMPORT FAQs JS -->
     <script src="js/faq.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
