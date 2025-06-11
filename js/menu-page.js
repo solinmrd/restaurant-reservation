@@ -13,7 +13,7 @@ const menuData = [
     title: "Meat Burger",
     image: "images/menu/burger.jpg",
     paragraph:
-      " Beef, Louisiana Sauce, Greens, Pickles, Caramelized Onion, Jalapeno Pepper, Roasted Pepper and Cheddar Cheese",
+      "Beef, Louisiana Sauce, Greens, Pickles, Caramelized Onion and Cheddar",
     price: 12.0,
     category: "fast food",
   },
@@ -111,7 +111,7 @@ const menuData = [
     title: "Hummus",
     image: "images/menu/humus.jpg",
     paragraph:
-      "Pumpkin Hummus, Beetroot Hummus, Ginger Hummus, Basil Hummus and Hummus with roasted eggplant",
+      "Pumpkin Hummus, Basil Hummus and Hummus with roasted eggplant",
     price: 8.0,
     category: "appetizers",
   },
@@ -144,7 +144,7 @@ const menuData = [
     title: "Chesscake",
     image: "images/menu/raspberry-cheesecake.jpg",
     paragraph:
-      "Fresh raspberry, lemon, San Sebastian, Brownie, Cherry, Strawberry , chocolate, Käsekuchen and forest fruit cheesecake",
+      "Fresh raspberry, lemon, chocolate, Käsekuchen and forest fruit cheesecake",
     price: 16.0,
     category: "sweets",
   },
@@ -225,7 +225,7 @@ const menuData = [
     title: "Sliced ​​Vegetable Platter",
     image: "images/menu/meze2.jpg",
     paragraph:
-      "Cucumber, tomato, mint, garlic, iceberg marul, red cabbage, olives and pickle varieties",
+      "Cucumber, tomato, mint, iceberg marul, red cabbage and olives",
     price: 10.00,
     category: "appetizers",
   },
@@ -261,7 +261,7 @@ const menuData = [
     title: "Brownie",
     image: "images/menu/brownie.jpg",
     paragraph:
-      "Cherry Walnut, Oreo, Peanut Caramel, Original and Refined Sugar Free Fit Brownie",
+      "Cherry Walnut, Original and Refined Sugar Free Fit Brownie",
     price: 14.00,
     category: "sweets",
   },
@@ -270,7 +270,7 @@ const menuData = [
     title: "Cinnamon Rolls",
     image: "images/menu/cinnamon.jpg",
     paragraph:
-      "Peanut Butter, Triple Berry,Pumpkin Spice, Nutella-Filled, Chocolate Chip, Apple Pie  and Classic Cinnamon Rolls",
+      "Peanut Butter, Triple Berry, Chocolate Chip, Apple Pie  and Classic Cinnamon Rolls",
     price: 16.00,
     category: "sweets",
   },
@@ -319,9 +319,9 @@ function renderItems(items) {
   grid.innerHTML = "";
   items.forEach((item) => {
     const card = document.createElement("div");
-    card.className = "col-md-3 mb-4";
+    card.className = "card-div";
     card.innerHTML = `
-        <div class="card">
+        <div class="card menu-card">
           <img src="${item.image}" class="card-img-top" alt="${item.title}">
           <div class="card-body">
             <h5 class="card-title">${item.title}</h5>

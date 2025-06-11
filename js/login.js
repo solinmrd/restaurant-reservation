@@ -75,7 +75,7 @@ adminSignBtn.addEventListener("click", () => {
       return res.json();
     })
     .then(() => {
-      successPopup("admin-dashboard.html");
+      successAdminPopup("admin-dashboard.html");
 
       // ADMİN BİLGİLERİ LOCALSTORAGE'A KAYDET
 
@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         body: JSON.stringify({
           name: name,
-          email: email,
+          customerEmail: email,
           phoneNumber: phone,
         }),
       }
@@ -141,7 +141,7 @@ document.addEventListener("DOMContentLoaded", () => {
       })
       .then((reservations) => {
         // alert("login successful");
-        successPopup("user-dashboard.html"); // Başarılı giriş mesajı için popup göster
+        successUserPopup("user-dashboard.html"); // Başarılı giriş mesajı için popup göster
         console.log("Login successful, now saving user name...");
         // KULLANICININ KİMLİĞİNİ TANITAN BİLGİLERİ LOCALSTORAGE'A KAYDET
         localStorage.setItem("userName", name);
@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-function successPopup() {
+function successAdminPopup() {
   const successDiv = document.createElement("div");
   successDiv.className = "popup center active";
 
@@ -214,11 +214,62 @@ function successPopup() {
       document.body.removeChild(successDiv);
       overflowAuto();
       // Başarılı giriş sonrası yönlendirme
-      if (localStorage.getItem("name")==="admin") {
-        window.location.href = "admin-dashboard.html";
-      } else {
-        window.location.href = "user-dashboard.html";
-      }
+      window.location.href = "admin-dashboard.html"; // Kullanıcı paneline yönlendir
+    }, 300); // Animasyon süresi kadar beklet
+  });
+}
+function successUserPopup() {
+  const successDiv = document.createElement("div");
+  successDiv.className = "popup center active";
+
+  const iconDiv = document.createElement("div");
+  iconDiv.className = "state-popup-icon success-icon";
+  const successIcon = document.createElement("i");
+  successIcon.className = "fa fa-check";
+
+  const succcessTitle = document.createElement("div");
+  succcessTitle.className = "state-title success-title";
+  succcessTitle.innerHTML = " Login Successful!";
+
+  const successDescription = document.createElement("div");
+  successDescription.className = "state-description success-description";
+  successDescription.innerHTML =
+    "Welcome back! You have successfully signed in to your dashboard.";
+
+  const okDiv = document.createElement("div");
+  okDiv.className = "ok-btn";
+  const okButton = document.createElement("button");
+  okButton.className = "ok-popup-btn";
+  okButton.innerHTML = "Close";
+
+  successDiv.appendChild(iconDiv);
+  successDiv.appendChild(succcessTitle);
+  successDiv.appendChild(successDescription);
+  successDiv.appendChild(okDiv);
+  iconDiv.appendChild(successIcon);
+  okDiv.appendChild(okButton);
+
+  document.body.appendChild(successDiv);
+
+  overflowHidden();
+
+  // ✅ OK butonuna tıklandığında animasyonla kapat, sonra yönlendir
+  okButton.addEventListener("click", () => {
+    // Animasyon başlat
+    successDiv.style.transition = "opacity 0.3s ease, transform 0.3s ease";
+    successDiv.style.opacity = "0";
+    successDiv.style.transform = "scale(0.9)";
+
+    const overlay = document.querySelector(".overlay");
+    if (overlay) {
+      overlay.classList.remove("active");
+    }
+
+    setTimeout(() => {
+      document.body.removeChild(successDiv);
+      overflowAuto();
+      // Başarılı giriş sonrası yönlendirme
+      window.location.href = "user-dashboard.html"; // Kullanıcı paneline yönlendir
     }, 300); // Animasyon süresi kadar beklet
   });
 }
