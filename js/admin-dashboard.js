@@ -232,6 +232,7 @@ function renderReservations(data) {
 
   data.forEach((r) => {
     const date = new Date(r.reservationTime);
+    console.log("email:", r.customerEmail);
     const formattedDate = date.toLocaleDateString("tr-TR");
     const time = date.toLocaleTimeString("tr-TR", {
       hour: "2-digit",
@@ -262,6 +263,8 @@ function renderReservations(data) {
       <td>${formattedDate}</td>
       <td>${time}</td>
       <td>${r.customerName}</td>
+      <td>${r.customerPhoneNumber}</td>
+      <td>${r.customerEmail}</td>
       <td>${r.peopleCounts}</td>
       <td>${r.description || "-"}</td>
       <td class="${statusClass}">${statusText}</td>
