@@ -221,3 +221,7 @@ cursor: pointer;
   justify-content: center;
   align-items: center;
 }
+.popup .state-popup-icon.warning-icon i.fa-solid {
+  color: #e8b10e;
+  font-size: 3rem;
+}

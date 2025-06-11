@@ -615,7 +615,7 @@ nav {
   width: 7.8rem;
   height: 0.4rem;
   background-color: #e8b10e;
-  z-index: 22000;
+  z-index: 10;
   border-radius: 10px;
   transition: all 0.3s ease-in-out;
 }
@@ -1154,4 +1154,28 @@ footer .social-media-icons .fa-brands:hover {
 }
 [data-loaded="true"] {
   display: block; /* Yüklendikten sonra göster */
+}
+
+
+/* Popup açıldığında arkaplan kararması */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.705); /* Karartma rengi */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 998;
+  pointer-events: none;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+dialog {
+  z-index: 999; /* Overlay'in üstünde kalmalı */
 }

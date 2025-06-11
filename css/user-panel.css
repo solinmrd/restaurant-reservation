@@ -411,18 +411,18 @@ section.hidden {
   font-size: 0.8rem;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+  background-color: #000;
+  color: #fff;
 }
 
-#active-reserv-card > .card > .card-footer > button.update-btn:hover {
-  background-color: #000;
-} */
+
 #active-reserv-card > .card > .card-footer > button.cancel-btn {
-  background-color: #e8b10e;
+  background-color: #000;
   color: #fff;
 }
 #active-reserv-card > .card > .card-footer > button.cancel-btn:hover {
   color: #fff;
-  background-color: #000;
+  background-color: #e8b10e;
 }
 
 h4.time-icon {
