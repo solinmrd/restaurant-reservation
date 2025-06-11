@@ -698,6 +698,27 @@
   .change-password {
     margin: 1rem 1rem !important;
   }
+  .menu-card {
+    height: 55vh !important;
+  }
+  .menu-card > .card-body {
+    padding: 0.5rem !important;
+  }
+  .statik-cards {
+    grid-template-columns: 1fr !important;
+  }
+
+  .card > .card-content > .card-name {
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+  }
+  .statik-cards > .card > .icon-box {
+    text-align: right !important;
+  }
+
+  .filter-buttons button {
+    margin: 0.2rem 0rem !important;
+  }
 }
 
 /* mobile */
@@ -887,6 +908,33 @@
   input[type="tel"] {
     font-size: 0.9rem;
   }
+
+  #menuGrid {
+    grid-template-columns: auto auto !important;
+  }
+  .menu-card {
+    height: 55vh !important;
+  }
+  .statik-cards {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .statik-cards > .card {
+    padding: 1.5rem !important;
+  }
+  .statik-cards > .card > .icon-box {
+    text-align: right !important;
+  }
+
+  .manage-sec-head {
+    display: block !important;
+  }
+  #searchInput {
+    width: 100% !important;
+  }
+  .filter-buttons {
+    width: 100% !important;
+  }
+
 }
 
 /* laptop */
@@ -941,6 +989,16 @@
   .time-card .selection-item {
     height: 1.5rem;
   }
+  .menu-card {
+    height: 55vh !important;
+  }
+  .menu-card > .card-body > .card-paragraph {
+    text-align: left !important;
+    font-size: 0.7rem !important;
+  }
+  #menuGrid {
+    gap: 1rem !important;
+  }
 }
 /* other screen */
 @media screen and (min-width: 1366px) {
@@ -955,6 +1013,9 @@
   }
   .team-section .card:hover {
     height: 25rem;
+  }
+  .menu-card {
+    height: 46vh !important;
   }
 }
 /* ---------------------------------------------------------------------------- */

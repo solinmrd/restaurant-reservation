@@ -2,13 +2,13 @@
 .welcome-text {
   text-transform: capitalize;
 }
-.cards {
+.statik-cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1rem;
   padding: 0rem 1rem;
 }
-.cards > .card {
+.statik-cards > .card {
   display: grid;
   grid-template-columns: auto auto;
   padding: 2rem;
@@ -29,7 +29,7 @@
 .cards > .card > .icon-box {
   text-align: center;
 }
-.cards > .card > .icon-box > i {
+.statik-cards > .card > .icon-box > i {
   font-size: 3rem;
   color: #e8b10e;
 }

@@ -19,32 +19,49 @@
   background-color: #e8b10e;
   color: #000;
 }
-.card {
+.menu-card{
   background-color: #fff;
   height: 50vh;
   color: #000;
   transition: transform 0.3s;
+  margin: 0rem !important;
+  padding: 0rem !important;
 }
-.card:hover {
+.menu-card:hover {
   transform: scale(1.03);
 }
-.card img {
+.menu-card img {
   height: 200px;
   object-fit: cover;
 }
-.card-title {
-  font-size: 1.1rem;
+.menu-card>.card-body>.card-title {
+  font-size: .9rem;
   text-transform: capitalize;
-  font-weight: 500;
+  font-weight: 600;
 }
-.card-paragraph {
+.menu-card>.card-body>.card-paragraph {
+  width: 100%;
   color: #a09f9f;
   text-align: justify;
   font-size: 0.8rem;
   margin: 0.5rem 0rem;
 }
-.card-price {
+.menu-card>.card-body>.card-price {
   font-size: 1rem;
   font-weight: 600;
   color: #000;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+#menuGrid{
+  display: grid;
+  grid-template-columns:auto auto auto auto;
+  gap: 1.4rem;
+
+}
+.card-div{
+  margin: 0;
+  padding: 0;
 }
