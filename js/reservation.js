@@ -188,10 +188,17 @@ function createForm() {
     });
 
     renderCalendar(currentDate);
+      generateTimeOptions();
+
   });
 
+  generateTimeOptions();
+
+}
+function generateTimeOptions() {
   // REZERVASYON SAATLERİ OLUŞTURMA VE SEÇİMİ
   const time = document.querySelector(".reserv-time-selection");
+  time.innerHTML = ""; // öncekileri temizle
   const timeItems = [
     "13:00",
     "13:30",
@@ -239,7 +246,6 @@ function createForm() {
     });
   });
 }
-
 createForm();
 
 // FORM
@@ -531,7 +537,8 @@ function overflowHidden() {
   dialog.style.transform = "scale(0.9)";
 
   setTimeout(() => {
-    dialog.style.transition = "opacity 0.5s ease-in-out, transform 0.3s ease-in-out";
+    dialog.style.transition =
+      "opacity 0.5s ease-in-out, transform 0.3s ease-in-out";
     dialog.style.opacity = "1";
     dialog.style.transform = "scale(1)";
   }, 10);
